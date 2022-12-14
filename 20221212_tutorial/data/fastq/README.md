@@ -25,3 +25,9 @@ samtools sort sp.bam > sp_sort.bam
 ```
 samtools index sp_sort.bam
 ```
+
+6 sp_sort.bamをigvで閲覧
+```
+igv
+```
+
