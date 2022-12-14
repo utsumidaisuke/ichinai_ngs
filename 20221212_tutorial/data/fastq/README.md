@@ -13,7 +13,7 @@ bwa mem -M -t 1 -R "@RG\tID:genome_tuto\tSM:tuto\tPL:ILLUMINA\tLB:tuto" ../ref/s
 
 3. samtoolsでsamファイルをbamファイルに変換
 ```
- samtools view -bS sp.sam > sp.bam
+samtools view -bS sp.sam > sp.bam
 ```
 
 4. bamファイルのソート
