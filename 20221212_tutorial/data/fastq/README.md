@@ -8,7 +8,7 @@ trim_galore --paired SRR18253109_1.fastq.gz SRR18253109_2.fastq.gz
 
 2 bwaでマッピング
 ```
-bwa mem -M -t 1 -R "@RG\tID:genome_tuto\tSM:tuto\tPL:ILLUMINA\tLB:tuto" ../ref_data/streptococcus_pneumoniae.fna SRR18253109_1_val_1.fq.gz SRR18253109_2_val_2.fq.gz > sp.sam
+bwa mem -M -t 1 -R "@RG\tID:genome_tuto\tSM:tuto\tPL:ILLUMINA\tLB:tuto" ../ref/streptococcus_pneumoniae.fna SRR18253109_1_val_1.fq.gz SRR18253109_2_val_2.fq.gz > sp.sam
 ```
 
 3 samtoolsでsamファイルをbamファイルに変換
