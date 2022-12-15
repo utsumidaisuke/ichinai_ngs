@@ -8,5 +8,5 @@
 - [Complete Genome Sequence of Streptococcus pneumoniae Strain Rx1, a Hex Mismatch Repair-Deficient Standard Transformation Recipient](https://pubmed.ncbi.nlm.nih.gov/34647809/)
 
 ### データ内容
-- data: マッピングに必要なfastqやファイルや参照ファイル
+- data: assembleに必要なfastqやファイルや参照ファイル
 - doc: 利用したfastqファイルの元論文
