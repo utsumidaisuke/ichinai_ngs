@@ -9,7 +9,7 @@
 ### パイプライン
 **1. アダプターのトリミング**   
 ```
-trim_galore --paired SRR18253109_1.fastq.gz SRR18253109_2.fastq.gz
+trim_galore --paired SRR13873709_1.fastq.gz SRR13873709_2.fastq.gz
 ```
 
 **2. unicyclerでde nobo assembly**  
