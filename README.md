@@ -1,6 +1,6 @@
 # 次世代シーケンサー(NGS)チュートリアル 
   
-### 環境構築
+### 解析のための下準備
 各種ツールをインストールするための環境を構築する必要あり
 - [homebrew](https://brew.sh/index_ja)のインストール
 ```
@@ -12,7 +12,7 @@ wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaf
 /bin/bash -c Mambaforge-MacOSX-x86_64.sh
 ```
 
-### 仮想環境
+### 仮想環境の構築
 mambaで仮想環境を設定し立ち上げる
 ```
 mamba create -n strP python=3.10
