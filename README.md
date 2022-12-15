@@ -23,19 +23,14 @@ mamba activate strP
 必要なツールのインストールをbrewとmambaで行う
 
 **brew**
-- sratoolkit: fastqファイルをダウンロード
-- wget: コマンドラインでファイルをダウンロード
 ```
 brew install sratoolkit
 brew install wget
 ```
+- sratoolkit: fastqファイルをダウンロード
+- wget: コマンドラインでファイルをダウンロード
 
 **mamba**
-- igv: bamファイルの可視化
-- bwa: fastqファイルのマッピング
-- spades: De novo assembly
-- samtools: bam、samファイル操作
-- trim-galore: リードデータからアダプタ配列を除去
 ```
 mamba install -c bioconda igv -y
 mamba install -c bioconda bwa -y
@@ -43,4 +38,8 @@ mamba install -c bioconda spades -y
 mamba install -c bioconda samtools -y
 mamba install -c bioconda trim-galore -y
 ```
-
+- igv: bamファイルの可視化
+- bwa: fastqファイルのマッピング
+- spades: De novo assembly
+- samtools: bam、samファイル操作
+- trim-galore: リードデータからアダプタ配列を除去
