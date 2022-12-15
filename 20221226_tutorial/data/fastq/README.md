@@ -1,7 +1,7 @@
 # De novo assemly
 
 ### 解析内容 
-肺炎球菌のilluminaとPacBioのリードデータからde novo assemblyを行う
+肺炎球菌のilluminaとPacBioのリードデータからUnicyclerを使ってde novo assemblyを行う
 
 ### 参考サイト  
 [Genome assembly: PacBio, Illumina and Illumina+PacBio hybrid data](https://bioinformaticshome.com/edu/Bioinformatics/Genome_Assembly/Bacterial_Genome/Genome_assembly_tutorial.html)
@@ -14,7 +14,7 @@ trim_galore --paired SRR18253109_1.fastq.gz SRR18253109_2.fastq.gz
 
 **2. spades.pyでde nobo assembly**  
 ```
-spades.py --pe1-1 SRR13873709_1.fastq.gz --pe1-2 SRR13873709_2.fastq.gz --pacbio SRR13873708.fastq.gz --careful -t 30 -o hybrid
+unicycler -1 SRR15216322_1.fastq.gz -2 SRR15216322_2.fastq.gz -l SRR15216323.fastq -o hybrid --mode bold
 ```
 
 **3. samtoolsでsamファイルをbamファイルに変換**
