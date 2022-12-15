@@ -12,26 +12,9 @@
 trim_galore --paired SRR18253109_1.fastq.gz SRR18253109_2.fastq.gz
 ```
 
-**2. spades.pyでde nobo assembly**  
+**2. unicyclerでde nobo assembly**  
 ```
-unicycler -1 SRR15216322_1.fastq.gz -2 SRR15216322_2.fastq.gz -l SRR15216323.fastq -o hybrid --mode bold
-```
-
-**3. samtoolsでsamファイルをbamファイルに変換**
-```
-samtools view -bS sp.sam > sp.bam
+unicycler -1 SRR13873709_1_val_1.fq.gz -2 SRR13873709_2_val_2.fq.gz -l SRR13873708.fastq.gz --mode bold -o hybrid
 ```
 
-**4. bamファイルのソート**
-```
-samtools sort sp.bam > sp_sort.bam
-```
 
-**5. bamファイルのインデックスを作成**
-```
-samtools index sp_sort.bam
-```
-
-**6 sp_sort.bamをigvで閲覧**
-```
-igv
