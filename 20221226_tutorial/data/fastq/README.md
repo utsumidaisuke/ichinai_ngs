@@ -1,6 +1,7 @@
 # De novo assemly
 
-### 肺炎球菌のilluminaとPacBioのリードデータからde novo assemblyを行う
+### 解析内容 
+肺炎球菌のilluminaとPacBioのリードデータからde novo assemblyを行う
 
 ### 参考サイト  
 [Genome assembly: PacBio, Illumina and Illumina+PacBio hybrid data](https://bioinformaticshome.com/edu/Bioinformatics/Genome_Assembly/Bacterial_Genome/Genome_assembly_tutorial.html)
