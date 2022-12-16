@@ -24,4 +24,8 @@ trim_galore --paired SRR13873709_1.fastq.gz SRR13873709_2.fastq.gz
 unicycler -1 SRR13873709_1_val_1.fq.gz -2 SRR13873709_2_val_2.fq.gz -l SRR13873708.fastq.gz --mode bold -o hybrid
 ```
 
+**3. prodigalで遺伝子了領域を予測**
+```
+prodigal -i hybrid/assembly.fasta -o hybrid/sp.genes -a hybrid/sp.faa
+```
 

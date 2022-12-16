@@ -38,6 +38,7 @@ mamba install -c bioconda spades -y
 mamba install -c bioconda unicycler -y
 mamba install -c bioconda samtools -y
 mamba install -c bioconda trim-galore -y
+mamba install -c bioconda prodigal -y
 ```
 - igv: bamファイルの可視化
 - bwa: fastqファイルのマッピング
@@ -45,3 +46,4 @@ mamba install -c bioconda trim-galore -y
 - unicycler: De novo assembly
 - samtools: bam、samファイル操作
 - trim-galore: リードデータからアダプタ配列を除去
+- prodigal: ゲノム配列から遺伝子領域を予測
