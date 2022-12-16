@@ -7,7 +7,7 @@
 M1 Macではunicyclerが正常に動作しない
 
 ### 参考サイト  
-[Genome assembly: PacBio, Illumina and Illumina+PacBio hybrid data](https://bioinformaticshome.com/edu/Bioinformatics/Genome_Assembly/Bacterial_Genome/Genome_assembly_tutorial.html)
+[Unicycler](https://github.com/rrwick/Unicycler)
 
 ### GFAファイル可視化ツール
 [Bandage](https://rrwick.github.io/Bandage/)
