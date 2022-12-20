@@ -29,7 +29,7 @@ brew install wget
 - wget: コマンドラインでファイルをダウンロード  
 <br>  
 
-**Windows Linuxの場合**
+**Windows Linuxの場合**  
 (WindowsではWSLをインストールした後、Ubuntu20.04をインストールしている前提)
 - [mamba](https://github.com/conda-forge/miniforge)のインストール
 ```
@@ -42,7 +42,7 @@ sudo apt update
 sudo apt install sra-toolkit
 ```
 
-### 仮想環境の構築
+### 仮想環境の構築 (MacとWindows共通)
 mambaで仮想環境を設定し立ち上げる
 ```
 mamba create -n strP python=3.10
