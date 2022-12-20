@@ -8,7 +8,7 @@
 (MacとWindowsは設定方法が異なる)  
 <br>
 
-**macの場合**
+**Macの場合**
 - [homebrew](https://brew.sh/index_ja)のインストール
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"	
@@ -20,7 +20,6 @@ wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaf
 ```
 
 必要なツールのインストールをbrewとmambaで行う
-**brew**
 ```
 brew install sratoolkit
 brew install wget
@@ -58,7 +57,6 @@ mamba install -c bioconda unicycler -y
 mamba install -c bioconda samtools -y
 mamba install -c bioconda trim-galore -y
 mamba install -c bioconda prodigal -y
-mamba install -c bioconda sra-tools -y
 ```
 - igv: bamファイルの可視化
 - bwa: fastqファイルのマッピング
