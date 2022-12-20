@@ -2,6 +2,7 @@
   
 ### 解析のための下準備
 各種ツールをインストールするための環境を構築する必要あり
+**macの場合**
 - [homebrew](https://brew.sh/index_ja)のインストール
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"	
@@ -12,16 +13,7 @@ wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaf
 /bin/bash -c Mambaforge-MacOSX-x86_64.sh
 ```
 
-### 仮想環境の構築
-mambaで仮想環境を設定し立ち上げる
-```
-mamba create -n strP python=3.10
-mamba activate strP
-```
-
-### ツールのインストール
 必要なツールのインストールをbrewとmambaで行う
-
 **brew**
 ```
 brew install sratoolkit
@@ -29,6 +21,25 @@ brew install wget
 ```
 - sratoolkit: fastqファイルをダウンロード
 - wget: コマンドラインでファイルをダウンロード
+
+**Windows Linuxの場合**
+- [mamba](https://github.com/conda-forge/miniforge)のインストール
+```
+wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
+/bin/bash https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
+```
+必要なツールのインストールをatpで行う
+```
+sudo apt update
+sudo apt install sra-toolkit
+```
+
+### 仮想環境の構築
+mambaで仮想環境を設定し立ち上げる
+```
+mamba create -n strP python=3.10
+mamba activate strP
+```
 
 **mamba**
 ```
