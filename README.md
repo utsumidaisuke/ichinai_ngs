@@ -3,6 +3,8 @@
 ### 解析のための下準備
 各種ツールをインストールするための環境を構築する必要あり  
 <br>
+
+###必要なツールの設定(MacとWindowsは設定方法が異なる)
 **macの場合**
 - [homebrew](https://brew.sh/index_ja)のインストール
 ```
@@ -25,6 +27,7 @@ brew install wget
 <br>  
 
 **Windows Linuxの場合**
+(WindowsではWSLをインストールした後、Ubuntu20.04をインストールしている前提)
 - [mamba](https://github.com/conda-forge/miniforge)のインストール
 ```
 wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
