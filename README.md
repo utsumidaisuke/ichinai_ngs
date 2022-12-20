@@ -2,6 +2,7 @@
   
 ### 解析のための下準備
 各種ツールをインストールするための環境を構築する必要あり  
+<br>
 **macの場合**
 - [homebrew](https://brew.sh/index_ja)のインストール
 ```
@@ -21,7 +22,7 @@ brew install wget
 ```
 - sratoolkit: fastqファイルをダウンロード
 - wget: コマンドラインでファイルをダウンロード
-
+<br>
 **Windows Linuxの場合**
 - [mamba](https://github.com/conda-forge/miniforge)のインストール
 ```
