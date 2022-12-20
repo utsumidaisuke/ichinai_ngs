@@ -22,8 +22,8 @@ wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaf
 
 - 必要なツールのインストールをbrewで行う
 ```
-brew install sratoolkit
-brew install wget
+brew install sratoolkit  
+brew install wget  
 ```
 sratoolkit: fastqファイルをダウンロード
 wget: コマンドラインでファイルをダウンロード  
@@ -59,10 +59,10 @@ mamba install -c bioconda samtools -y
 mamba install -c bioconda trim-galore -y
 mamba install -c bioconda prodigal -y
 ```
-igv: bamファイルの可視化
-bwa: fastqファイルのマッピング
-spades: De novo assembly
-unicycler: De novo assembly
-samtools: bam、samファイル操作
-trim-galore: リードデータからアダプタ配列を除去
-prodigal: ゲノム配列から遺伝子領域を予測
+igv: bamファイルの可視化  
+bwa: fastqファイルのマッピング  
+spades: De novo assembly  
+unicycler: De novo assembly  
+samtools: bam、samファイル操作  
+trim-galore: リードデータからアダプタ配列を除去  
+prodigal: ゲノム配列から遺伝子領域を予測  
