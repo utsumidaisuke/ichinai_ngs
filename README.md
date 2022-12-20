@@ -20,7 +20,7 @@ wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaf
 /bin/bash -c Mambaforge-MacOSX-x86_64.sh
 ```
 
-必要なツールのインストールをbrewで行う
+- 必要なツールのインストールをbrewで行う
 ```
 brew install sratoolkit
 brew install wget
@@ -36,20 +36,20 @@ brew install wget
 wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
 /bin/bash https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
 ```
-必要なツールのインストールをatpで行う
+- 必要なツールのインストールをatpで行う
 ```
 sudo apt update
 sudo apt install sra-toolkit
 ```
 
 ### 仮想環境の構築 (MacとWindows共通)
-mambaで仮想環境を設定し立ち上げる
+- mambaで仮想環境を設定し立ち上げる
 ```
 mamba create -n strP python=3.10
 mamba activate strP
 ```
 
-必要なツールのインストールをmambaで行う
+- 必要なツールのインストールをmambaで行う
 ```
 mamba install -c bioconda igv -y
 mamba install -c bioconda bwa -y
