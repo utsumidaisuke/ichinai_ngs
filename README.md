@@ -22,7 +22,7 @@ brew install wget
 ```
 - sratoolkit: fastqファイルをダウンロード
 - wget: コマンドラインでファイルをダウンロード  
-<br>  
+<br />  
 **Windows Linuxの場合**
 - [mamba](https://github.com/conda-forge/miniforge)のインストール
 ```
