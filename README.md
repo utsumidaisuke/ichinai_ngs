@@ -25,7 +25,7 @@ wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaf
 brew install sratoolkit  
 brew install wget  
 ```
-sratoolkit: fastqファイルをダウンロード
+sratoolkit: fastqファイルをダウンロード  
 wget: コマンドラインでファイルをダウンロード  
 <br>  
 
