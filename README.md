@@ -20,7 +20,7 @@ wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaf
 /bin/bash -c Mambaforge-MacOSX-x86_64.sh
 ```
 
-必要なツールのインストールをbrewとmambaで行う
+必要なツールのインストールをbrewで行う
 ```
 brew install sratoolkit
 brew install wget
@@ -49,7 +49,7 @@ mamba create -n strP python=3.10
 mamba activate strP
 ```
 
-**mamba**
+必要なツールのインストールをmambaで行う
 ```
 mamba install -c bioconda igv -y
 mamba install -c bioconda bwa -y
