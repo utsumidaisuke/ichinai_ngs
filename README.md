@@ -6,6 +6,8 @@
 
 ### 必要なツールの設定
 (MacとWindowsは設定方法が異なる)  
+<br>
+
 **macの場合**
 - [homebrew](https://brew.sh/index_ja)のインストール
 ```
