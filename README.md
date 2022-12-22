@@ -34,8 +34,10 @@ wget: コマンドラインでファイルをダウンロード
 - [mamba](https://github.com/conda-forge/miniforge)のインストール
 ```
 wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
-/bin/bash https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
+/bin/bash https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh  
 ```
+mambaのインストールが終了したら、一度ターミナルを閉じて再起動の必要あり  
+再起動を行わないと、"mamba not found"のエラーが表示される  
 - 必要なツールのインストールをatpで行う
 ```
 sudo apt update
