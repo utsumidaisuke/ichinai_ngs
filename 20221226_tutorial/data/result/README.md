@@ -5,6 +5,6 @@
 
 ### 実行コマンド
 ```
-Rscript visualize.R ../assembly.fasta ../sp.ref.fa output.visual
+Rscript visualize.R ../assembly.fasta ../sp.ref.fna output.visual
 ```
 
