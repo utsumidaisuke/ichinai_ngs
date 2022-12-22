@@ -19,7 +19,7 @@ wget -c https://github.com/ParBLiSS/FastANI/releases/download/v1.33/fastANI-Linu
 unzip fastANI-Linux64-v1.33.zip
 cp fastANI data/
 ```
-**Rの準備**
+- Rの準備
 ```
 # Rを起動後下記のコマンドを実行
 # 実行後ctrl+DでRを抜ける
