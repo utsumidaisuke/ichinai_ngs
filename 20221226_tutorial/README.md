@@ -11,10 +11,9 @@ wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/076/835/GCF_002076835.1
   - [fastANI](https://github.com/ParBLiSS/FastANI)
   - [参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/09/14/141442)
 
-- 下準備
+- 下準備(dataディレクトリに保存済み)
   - fastANIの実行ファイルのダウンロード
 ```
-
 wget -c https://github.com/ParBLiSS/FastANI/releases/download/v1.33/fastANI-Linux64-v1.33.zip
 unzip fastANI-Linux64-v1.33.zip
 ```
