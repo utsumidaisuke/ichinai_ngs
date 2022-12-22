@@ -19,6 +19,8 @@ M1 Macは様々な不具合が生じるので、使用を推奨しない
 wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-MacOSX-x86_64.sh
 /bin/bash -c Mambaforge-MacOSX-x86_64.sh
 ```
+mambaのインストールが終了したら、一度ターミナルを閉じて再起動の必要あり
+再起動を行わないと、"mamba not found"のエラーが表示される
 
 - 必要なツールのインストールをbrewで行う
 ```
@@ -37,7 +39,8 @@ wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaf
 /bin/bash https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh  
 ```
 mambaのインストールが終了したら、一度ターミナルを閉じて再起動の必要あり  
-再起動を行わないと、"mamba not found"のエラーが表示される  
+再起動を行わないと、"mamba not found"のエラーが表示される
+  
 - 必要なツールのインストールをatpで行う
 ```
 sudo apt update
