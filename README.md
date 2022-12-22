@@ -32,7 +32,7 @@ wget: コマンドラインでファイルをダウンロード
 <br>  
 
 **Windows Linuxの場合**  
-(WindowsではWSLをインストールした後、Ubuntu20.04をインストールしている前提)
+(WindowsではWSLをインストールした後、**Ubuntu22.04**をインストールしている前提)
 - [mamba](https://github.com/conda-forge/miniforge)のインストール
 ```
 wget -c https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
