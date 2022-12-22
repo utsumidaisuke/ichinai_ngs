@@ -12,8 +12,8 @@ cp GCF_002076835.1_ASM207683v1_genomic.fna.gz data/sp.ref.fna
 - [fastANI](https://github.com/ParBLiSS/FastANI)
 - [参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/09/14/141442)
 
-**下準備(dataディレクトリに保存済み)**
-- fastANIの実行ファイルのダウンロード
+**下準備**
+- fastANIの実行ファイルのダウンロード (dataディレクトリに保存済み)
 ```
 wget -c https://github.com/ParBLiSS/FastANI/releases/download/v1.33/fastANI-Linux64-v1.33.zip
 unzip fastANI-Linux64-v1.33.zip
