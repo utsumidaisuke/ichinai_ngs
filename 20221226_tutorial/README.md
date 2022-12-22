@@ -8,5 +8,21 @@ wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/076/835/GCF_002076835.1
 ```
 
 - ゲノム比較ツール
- - [fastANI](https://github.com/ParBLiSS/FastANI)
+  - [fastANI](https://github.com/ParBLiSS/FastANI)
+  - [参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/09/14/141442)
+
+- 下準備
+  - fastANIの実行ファイルのダウンロード
+```
+
+wget -c https://github.com/ParBLiSS/FastANI/releases/download/v1.33/fastANI-Linux64-v1.33.zip
+unzip fastANI-Linux64-v1.33.zip
+```
+  - Rの準備
+```
+# Rを起動後下記のコマンドを実行
+# 実行後ctrl+DでRを抜ける
+install.packages("genoPlotR", repos="http://R-Forge.R-project.org")
+
+```
 
