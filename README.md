@@ -63,6 +63,7 @@ mamba install -c bioconda unicycler -y
 mamba install -c bioconda samtools -y
 mamba install -c bioconda trim-galore -y
 mamba install -c bioconda prodigal -y
+mamba install -c r r -y
 ```
 igv: bamファイルの可視化  
 bwa: fastqファイルのマッピング  
