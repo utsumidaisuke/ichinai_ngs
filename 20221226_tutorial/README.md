@@ -26,4 +26,5 @@ cp fastANI data/
 install.packages("genoPlotR", repos="http://R-Forge.R-project.org")
 
 ```
-
+**assembly済みファイル**
+data/assembly.fasta(20221219_tutorialで作成)
