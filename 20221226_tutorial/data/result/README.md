@@ -10,4 +10,4 @@ fastANIの出力ファイルcomp_result.visualをvisualize.Rのスクリプト�
 ```
 Rscript visualize.R ../assembly.fasta ../sp.ref.fna comp_result.visual
 ```
-
+結果ファイルはcomp_result.visual.pdfとして出力される
