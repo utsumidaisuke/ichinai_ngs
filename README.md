@@ -71,4 +71,5 @@ spades: De novo assembly
 unicycler: De novo assembly  
 samtools: bam、samファイル操作  
 trim-galore: リードデータからアダプタ配列を除去  
-prodigal: ゲノム配列から遺伝子領域を予測  
+prodigal: ゲノム配列から遺伝子領域を予測 
+r: R言語 
