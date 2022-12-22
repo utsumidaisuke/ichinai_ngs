@@ -2,5 +2,5 @@
 
 ### fastANIコマンド
 ```
-./fastANI -r sp.ref.fna -q assembly.fasta --visualize -o result/omp_result
+./fastANI -r sp.ref.fna -q assembly.fasta --visualize -o result/comp_result
 ```
