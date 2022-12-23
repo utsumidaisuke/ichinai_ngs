@@ -68,6 +68,7 @@ mamba install -c bioconda unicycler -y
 mamba install -c bioconda samtools -y
 mamba install -c bioconda trim-galore -y
 mamba install -c bioconda prodigal -y
+mamba install -c bioconda seqkit -y
 mamba install -c r r -y
 ```
 igv: bamファイルの可視化  
@@ -77,4 +78,5 @@ unicycler: De novo assembly
 samtools: bam、samファイル操作  
 trim-galore: リードデータからアダプタ配列を除去  
 prodigal: ゲノム配列から遺伝子領域を予測   
+seqkit: fastaファイルの操作
 r: R言語 
