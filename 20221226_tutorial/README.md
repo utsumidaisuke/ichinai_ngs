@@ -15,9 +15,14 @@
 **実行コマンド**  
 - sample.fnaのアライメントを標準出力する
 ```
-clustalo -t Protein -i sample.fna --outfmt=clu
+clustalo -t Protein -i sample.fna --outfmt=clu --resno
 ```
 - sample.fnaのアライメントをresult.txtに出力する
 ```
-clustalo -t Protein -i sample.fna --outfmt=clu -o result.txt
+clustalo -t Protein -i sample.fna --outfmt=clu -o alignment.txt --resno
 ```
+- sample.fnaのアライメントをalignment.txtに、一致率をidentity.txtに出力する
+```
+clustalo -t Protein -i sample.fna --outfmt=clu -o alignment.txt --percent-id --full --distmat-out identity.txt --resno
+```
+
