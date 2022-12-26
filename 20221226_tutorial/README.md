@@ -8,3 +8,6 @@
   - [macでインフォマティクス](https://kazumaxneo.hatenablog.com/entry/2020/07/30/073000)
   - [bioinformatics](https://bi.biopapyrus.jp/seq/alignment/software/clustal-omega.html)
 
+**下準備**
+clustaloのサイトのサンプルデータを流用
+サンプルデータ： sample.fna
