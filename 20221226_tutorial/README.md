@@ -9,15 +9,15 @@
   - [bioinformatics](https://bi.biopapyrus.jp/seq/alignment/software/clustal-omega.html)
 
 **下準備**  
-clustaloのサイトのサンプルデータを流用  
-サンプルデータ： sample.fna  
+- clustaloのサイトのサンプルデータを流用  
+- サンプルデータ： sample.fna  
 
 **実行コマンド**  
-sample.fnaのアライメントを標準出力する
+- sample.fnaのアライメントを標準出力する
 ```
 clustalo -t Protein -i sample.fna --outfmt=clu
 ```
-sample.fnaのアライメントをresult.txtに出力する
+- sample.fnaのアライメントをresult.txtに出力する
 ```
 clustalo -t Protein -i sample.fna --outfmt=clu -o result.txt
 ```
