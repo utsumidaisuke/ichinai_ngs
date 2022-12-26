@@ -8,6 +8,16 @@
   - [macでインフォマティクス](https://kazumaxneo.hatenablog.com/entry/2020/07/30/073000)
   - [bioinformatics](https://bi.biopapyrus.jp/seq/alignment/software/clustal-omega.html)
 
-**下準備**
-clustaloのサイトのサンプルデータを流用
-サンプルデータ： sample.fna
+**下準備**  
+clustaloのサイトのサンプルデータを流用  
+サンプルデータ： sample.fna  
+
+**実行コマンド**  
+sample.fnaのアライメントを標準出力する
+```
+clustalo -t Protein -i sample.fna --outfmt=clu
+```
+sample.fnaのアライメントをresult.txtに出力する
+```
+clustalo -t Protein -i sample.fna --outfmt=clu -o result.txt
+```
