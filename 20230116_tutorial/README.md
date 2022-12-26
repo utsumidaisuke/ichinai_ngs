@@ -18,7 +18,6 @@ gunzip -c GCF_002076835.1_ASM207683v1_genomic.fna.gz > data/sp.ref.fna
 ```
 wget -c https://github.com/ParBLiSS/FastANI/releases/download/v1.33/fastANI-Linux64-v1.33.zip
 unzip fastANI-Linux64-v1.33.zip
-cp fastANI data/
 ```
 - Rの準備
 ```
@@ -29,7 +28,7 @@ install.packages("genoPlotR", repos="http://R-Forge.R-project.org")
 ```
 - assembly済みファイル(20221219_tutorialで作成)  
 ```
-data/assembly.fasta
+assembly.fasta
 ```
 
 **fastANIでゲノム比較**  
