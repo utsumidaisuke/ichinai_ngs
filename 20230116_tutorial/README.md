@@ -27,11 +27,10 @@ cp fastANI data/
 install.packages("genoPlotR", repos="http://R-Forge.R-project.org")
 
 ```
-- assembly済みファイル
+- assembly済みファイル(20221219_tutorialで作成)  
 ```
 data/assembly.fasta
 ```
-(20221219_tutorialで作成)
 
 **fastANIでゲノム比較**  
 - De novo assemblyで決定したassembly.fastaと肺炎球菌参照ゲノムのsp.ref.fnaをfastANIで比較
