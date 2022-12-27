@@ -70,7 +70,7 @@ mamba install -c bioconda seqkit -y
 mamba install -c bioconda clustalo -y
 mamba install -c r r -y
 ```
-igv: bamファイルの可視化  
+**igv**: bamファイルの可視化  
 bwa: fastqファイルのマッピング  
 spades: De novo assembly  
 unicycler: De novo assembly  
