@@ -1,20 +1,20 @@
 # De novo assemly
 
-### 解析内容 
+## 解析内容 
 肺炎球菌のilluminaとPacBioのリードデータからUnicyclerを使ってde novo assemblyを行う
 
-### 注意点
+## 注意点
 M1 Macではunicyclerが正常に動作しない  
 メモリの小さい(4GB以下)だとunicyclerが途中で停止してしまう。  
 
-### 参考サイト  
+## 参考サイト  
 [Unicycler](https://github.com/rrwick/Unicycler)
 
-### GFAファイル可視化ツール
+## GFAファイル可視化ツール
 [Bandage](https://rrwick.github.io/Bandage/)
 
 
-### パイプライン
+## パイプライン
 **1. アダプターのトリミング**   
 ```
 trim_galore --paired SRR13873709_1.fastq.gz SRR13873709_2.fastq.gz
