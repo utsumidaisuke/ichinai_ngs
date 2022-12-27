@@ -1,6 +1,4 @@
-# 20221226_tutorial  
-
-## 20221226_tutorialの内容  
+# 20221226_tutorialの内容  
 - **肺炎球菌サンプルのde novo assembly**  
   - 参考論文のMinionとilluminaデータからunicyclerを使用し、de novo assemblyを行う
 
