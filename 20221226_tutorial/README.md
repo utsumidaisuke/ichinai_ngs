@@ -9,7 +9,7 @@ Clustaloで複数のアミノ酸配列をアライメントする
 [bioinformatics](https://bi.biopapyrus.jp/seq/alignment/software/clustal-omega.html)
 
 ## 下準備  
-clustaloのサイトのサンプルデータを流用  
+clustaloのサイトのサンプルデータを流用   
 サンプルデータ： sample.fna  
 
 ## 実行コマンド
