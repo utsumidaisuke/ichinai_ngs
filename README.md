@@ -78,5 +78,5 @@ samtools: bam、samファイル操作
 trim-galore: リードデータからアダプタ配列を除去  
 prodigal: ゲノム配列から遺伝子領域を予測   
 seqkit: fastaファイルの操作
-clustalo: 塩基・アミノ酸のアライメント
+clustalo: 塩基・アミノ酸のアライメント  
 r: R言語 
