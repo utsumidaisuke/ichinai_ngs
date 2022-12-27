@@ -1,13 +1,11 @@
 # 次世代シーケンサー(NGS)チュートリアル 
   
-### 解析のための下準備
+## 解析のための下準備
 各種ツールをインストールするための環境を構築する必要あり  
 M1 Macは様々な不具合が生じるので、使用を推奨しない
-<br>
 
-### 必要なツールの設定
+## 必要なツールの設定
 (MacとWindowsは設定方法が異なる)  
-<br>
 
 **Macの場合**
 - [homebrew](https://brew.sh/index_ja)のインストール
@@ -52,7 +50,7 @@ sudo apt update
 sudo apt install sra-toolkit
 ```
 
-### 仮想環境の構築 (MacとWindows共通)
+## 仮想環境の構築 (MacとWindows共通)
 - mambaで仮想環境を設定し立ち上げる
 ```
 mamba create -n strP python=3.10
@@ -80,4 +78,5 @@ samtools: bam、samファイル操作
 trim-galore: リードデータからアダプタ配列を除去  
 prodigal: ゲノム配列から遺伝子領域を予測   
 seqkit: fastaファイルの操作
+clustalo: 塩基・アミノ酸のアライメント
 r: R言語 
