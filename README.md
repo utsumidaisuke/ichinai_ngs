@@ -7,7 +7,7 @@ M1 Macは様々な不具合が生じるので、使用を推奨しない
 ## 必要なツールの設定
 (MacとWindowsは設定方法が異なる)  
 
-**Macの場合**
+### Macの場合
 - [homebrew](https://brew.sh/index_ja)のインストール
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"	
@@ -29,7 +29,7 @@ sratoolkit: fastqファイルをダウンロード
 wget: コマンドラインでファイルをダウンロード  
 <br>  
 
-**Windows Linuxの場合**  
+### Windows Linuxの場合
 (WindowsではWSLをインストールした後、**Ubuntu22.04**をインストールしている前提)
 - [mamba](https://github.com/conda-forge/miniforge)のインストール
 ```
