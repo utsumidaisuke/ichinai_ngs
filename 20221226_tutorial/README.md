@@ -1,5 +1,5 @@
 # 20221226_tutorialの内容
-Clustaloで複数のアミノ酸配列をアライメントする
+**Clustaloで複数のアミノ酸配列をアライメントする** 
 
 ## アライメントツール
 [clustalo](https://www.ebi.ac.uk/Tools/msa/clustalo/)
