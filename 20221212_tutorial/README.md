@@ -8,18 +8,19 @@ pdfディレクトリに利用したfastqファイルの元論文
 上記論文のデータをサンプルデータとして利用
 
 ## fastqファイルの取得
-fastq-dumpでfastqファイルをダウンロード
+fastq-dumpでfastqファイルをダウンロードし、fastqディレクトリに保存
 ```
 fastq-dump --gzip --split-files --outdir fastq SRR18253109
 ```
 
 ## 参照ファイルの取得
 fnaとgffファイルがダウンロード可能なサイト
+ダウンロードしたファイルはrefディレクトリに保存
 ```
 https://www.ncbi.nlm.nih.gov/genome/?term=streptococcus%20pneumoniae
 ```
 
-wgetでファイルをダウンロードし、refディレクトリに保存
+wgetでファイルをダウンロード
 gzファイルの解凍
 ```
 wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/076/835/GCF_002076835.1_ASM207683v1/GCF_002076835.1_ASM207683v1_genomic.gff.gz -O ref/streptococcus_pneumoniae.gff.gz
