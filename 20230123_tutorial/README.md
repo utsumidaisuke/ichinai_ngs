@@ -1,8 +1,8 @@
 # 20230123_tutorialの内容
-Prokaryotic Genome Annotation Pipeline(PGAP)で細菌ゲノムのアノテーション
+**Prokaryotic Genome Annotation Pipeline(PGAP)で細菌ゲノムのアノテーション**  
 
-## PGAP
-**細菌ゲノムに対して遺伝子の検出やアノテーション、Genebank形式のファイルの出力をおこなう**  
+## PGAP 
+細菌ゲノムに対して遺伝子の検出やアノテーション、Genebank形式のファイルの出力をおこなう   
 [参考サイト](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/)  
 [参考githubサイト](https://github.com/ncbi/pgap)
 
