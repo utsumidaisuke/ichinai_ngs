@@ -1,4 +1,4 @@
-# 20230116_tutorialの内容
+# 20230123_tutorialの内容
 Prokaryotic Genome Annotation Pipeline(PGAP)で細菌ゲノムのアノテーション
 
 ## PGAP
