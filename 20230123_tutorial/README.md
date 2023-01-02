@@ -8,7 +8,7 @@ Prokaryotic Genome Annotation Pipeline(PGAP)で細菌ゲノムのアノテーシ
 
 
 ## 下準備
-- 実行ファイルおよびデータベースのダウンロード
+- 実行ファイルおよびデータベースのダウンロード  
 15GB程度のデータを取得する必要あり
 ```
 wget -c https://github.com/ncbi/pgap/blob/master/scripts/pgap.py
