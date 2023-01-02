@@ -6,16 +6,12 @@ Prokaryotic Genome Annotation Pipeline(PGAP)で細菌ゲノムのアノテーシ
 [参考サイト](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/)  
 [参考githubサイト](https://github.com/ncbi/pgap)
 
-必要ファイルのダウンロード方法
-```
-wget -c https://github.com/ncbi/pgap/blob/master/scripts/pgap.py
-```
-
 
 ## 下準備
-- データベースのダウンロード
+- 実行ファイルおよびデータベースのダウンロード
 15GB程度のデータを取得する必要あり
 ```
+wget -c https://github.com/ncbi/pgap/blob/master/scripts/pgap.py
 chmod +x pgap.py
 pgap.py --update
 ```
