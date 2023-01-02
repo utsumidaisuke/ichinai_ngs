@@ -12,7 +12,7 @@
 clustaloのサイトのサンプルデータを流用   
 サンプルデータ： sample.fnaとして保存  
 
-## 実行コマンド
+## アミノ酸配列のアライメント
 sample.fnaのアライメントを標準出力する
 ```
 clustalo -t Protein -i sample.fna --outfmt=clu --resno
