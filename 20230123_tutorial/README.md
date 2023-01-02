@@ -42,5 +42,5 @@ organism:
 ## assembly.fastaのアノテーション
 
 ```
-pgap.py --ignore-all-errors -r -o result input.yaml
+pgap.py --ignore-all-errors -c 20 -r -o result input.yaml
 ```
