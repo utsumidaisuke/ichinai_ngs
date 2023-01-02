@@ -8,7 +8,6 @@ Prokaryotic Genome Annotation Pipeline(PGAP)で細菌ゲノムのアノテーシ
 必要ファイルのダウンロード方法
 ```
 wget -c https://github.com/ncbi/pgap/blob/master/scripts/pgap.py
-chmod +x pgap.py
 ```
 
 
@@ -16,6 +15,7 @@ chmod +x pgap.py
 - データベースのダウンロード
 15GB程度のデータを取得する必要あり
 ```
+chmod +x pgap.py
 pgap.py --update
 ```
 - assembly済みファイル(20221219_tutorialで作成した最長のcontigを利用) 
@@ -25,6 +25,7 @@ assembly.fasta
 
 - input.yamlの内容
 ```
+# vi input.yamlで下記を記載
 fasta:
   class: File
   location: assembly.fasta
@@ -35,6 +36,7 @@ submol:
 
 - submol.yamlの内容
 ```
+# vi submol.yamlで下記を記載
 topology: "circular"
 organism:
     genus_species: 'Streptococcus pneumoniae'
