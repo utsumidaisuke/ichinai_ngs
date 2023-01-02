@@ -4,7 +4,8 @@
 
 ## 参考論文  
 [Using whole genome sequencing to identify resistance determinants and predict antimicrobial resistance phenotypes for year 2015 invasive pneumococcal disease isolates recovered in the United States](https://pubmed.ncbi.nlm.nih.gov/27542334/)  
-pdfディレクトリに利用したfastqファイルの元論文
+pdfディレクトリに利用したfastqファイルの元論文  
+上記論文のデータをサンプルデータとして利用
 
 ## fastqファイルの取得
 fastq-dumpでfastqファイルをダウンロード
