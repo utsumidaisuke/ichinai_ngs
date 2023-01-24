@@ -28,6 +28,15 @@ Mac(M1,M2,Intel)用のインストーラのダウンロード
 wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2.13.0+.dmg
 ```
 
+**サンプルデータの取得**
+肺炎球菌参照ゲノムデータ:   
+https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP020549  
+肺炎球菌比較ゲノムデータ：
+1:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018136  
+2:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018137  
+3:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018138   
+
+
 ## BRIGの実行ファイルのダウンロード
 下記のサイトにアクセスすると必要なファイルが自動的にダウンロードされる  
 https://sourceforge.net/projects/brig/files/latest/download  
@@ -38,3 +47,7 @@ https://sourceforge.net/projects/brig/files/latest/download
 ```
 java -Xmx4000M -jar BRIG.jar
 ```
+BRIGのGUIでの操作方法の詳細は下記の動画を参照  
+https://www.youtube.com/watch?v=CTugtM1LR0M
+
+
