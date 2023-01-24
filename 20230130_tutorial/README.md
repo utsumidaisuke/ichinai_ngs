@@ -33,3 +33,7 @@ wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2
 https://sourceforge.net/projects/brig/files/latest/download
 ダウンロードしたファイルをデスクトップに移動し、解凍する
 
+## BRIG.jarの実行
+```
+java -Xmx4000M -jar BRIG.jar"
+```
