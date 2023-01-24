@@ -35,7 +35,7 @@ https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP020549
 1:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018136  
 2:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018137  
 3:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018138   
-<img src="pics/ncbi.png" alt="gbデータ取得方法" title="gbデータ" width='40%'>
+<img src="pics/ncbi.png" width='40%'>
 
 ## BRIGの実行ファイルのダウンロード
 下記のサイトにアクセスすると必要なファイルが自動的にダウンロードされる  
@@ -48,6 +48,9 @@ https://sourceforge.net/projects/brig/files/latest/download
 java -Xmx4000M -jar BRIG.jar
 ```
 BRIGのGUIでの操作方法の詳細は下記の動画を参照  
-https://www.youtube.com/watch?v=CTugtM1LR0M
+https://www.youtube.com/watch?v=CTugtM1LR0M  
 
-
+BRIGの入力例  
+<img src="pics/brig1.png" width='40%'>  
+<img src="pics/brig2.png" width='40%'>  
+<img src="pics/brig3.png" width='40%'>  
