@@ -43,6 +43,7 @@ https://sourceforge.net/projects/brig/files/latest/download
 ダウンロードしたファイルをデスクトップに移動し、解凍する  
 
 ## BRIG.jarの実行  
+ターミナルを開きBRIG.jarファイルのあるディレクトリで下記のコマンドラインを実行  
 -Xmx以下の数値は割り当てるメモリの大きさ
 ```
 java -Xmx4000M -jar BRIG.jar
