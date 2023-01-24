@@ -10,17 +10,17 @@
 ## 下準備
 javaやBLASTの設定を事前に行う必要あり
 
-**javaのインストール(Mac)** https://www.oracle.com/jp/java/technologies/downloads/#jdk19-mac
-M1,M2チップ用のインストーラのダウンロード  
+**javaのインストール(Mac)** (サイト: https://www.oracle.com/jp/java/technologies/downloads/#jdk19-mac)  
+M1,M2チップ用のインストーラのダウンロードしインストール  
 ```
 wget -c https://www.oracle.com/jp/java/technologies/downloads/#jdk19-mac:~:text=https%3A//download.oracle.com/java/19/latest/jdk%2D19_macos%2Daarch64_bin.dmg
 ```
-Intel CPU用のインストーラのダウンロード  
+Intel CPU用のインストーラのダウンロードしインストール   
 ```
 wget -c https://download.oracle.com/java/19/latest/jdk-19_macos-x64_bin.dmg
 ```
 
-**BLASTのインストール** (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)  
+**BLASTのインストール** (サイト: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)   
 Mac(M1,M2,Intel)用のインストーラのダウンロード  
 ```
 wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2.13.0+.dmg
