@@ -28,7 +28,7 @@ Mac(M1,M2,Intel)用のインストーラのダウンロード
 wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2.13.0+.dmg
 ```
 
-**サンプルデータの取得**
+**サンプルデータの取得**  
 肺炎球菌参照ゲノムデータ:   
 https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP020549  
 肺炎球菌比較ゲノムデータ：  
