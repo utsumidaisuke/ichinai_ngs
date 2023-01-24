@@ -35,6 +35,8 @@ https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP020549
 1:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018136  
 2:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018137  
 3:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018138   
+  
+gbファイルの取得方法  
 <img src="pics/ncbi.png" width='40%'>
 
 ## BRIGの実行ファイルのダウンロード
