@@ -2,13 +2,13 @@
 **BRIG(BLAST Ring Image Generator)で複数の細菌ゲノムの比較**  
 
 ## BRIG
-複数のfasta,fna,gbkファイル形式の最近ゲノムやプラスミドを読み込み、参照配列と比較を行う
-[参考サイト](https://brig.sourceforge.net/)  
-[参考githubサイト](https://github.com/happykhan/BRIG)
+複数のfasta,fna,gbkファイル形式の最近ゲノムやプラスミドを読み込み、参照配列と比較を行う  
+[参考サイト](https://brig.sourceforge.net/)    
+[参考githubサイト](https://github.com/happykhan/BRIG)  
 
 
 ## 下準備
-**javaやBLASTの設定を事前に行う必要あり
+**javaやBLASTの設定を事前に行う必要あり**
 
 - [javaのインストール(Mac)](https://www.oracle.com/jp/java/technologies/downloads/#jdk19-mac)
 M1,M2チップ用のインストーラのダウンロード
