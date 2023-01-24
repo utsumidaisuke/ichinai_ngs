@@ -53,4 +53,7 @@ https://www.youtube.com/watch?v=CTugtM1LR0M
 BRIGの入力例  
 <img src="pics/brig1.png" width='40%'>  
 <img src="pics/brig2.png" width='40%'>  
-<img src="pics/brig3.png" width='40%'>  
+<img src="pics/brig3.png" width='40%'> 
+
+## BRIGの実行結果の一例  
+<img src="pics/strain_Hu17_ref.gb.jpg" width='60%'> 
