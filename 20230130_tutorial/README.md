@@ -29,9 +29,9 @@ wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2
 ```
 
 ## BRIGの実行ファイルのダウンロード
-下記のサイトにアクセスすると必要なファイルが自動的にダウンロードされる
-https://sourceforge.net/projects/brig/files/latest/download
-ダウンロードしたファイルをデスクトップに移動し、解凍する
+下記のサイトにアクセスすると必要なファイルが自動的にダウンロードされる  
+https://sourceforge.net/projects/brig/files/latest/download  
+ダウンロードしたファイルをデスクトップに移動し、解凍する  
 
 ## BRIG.jarの実行  
 -Xmx以下の数値は割り当てるメモリの大きさ
