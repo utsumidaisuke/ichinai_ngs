@@ -28,3 +28,8 @@ Mac(M1,M2,Intel)用のインストーラのダウンロード
 wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2.13.0+.dmg
 ```
 
+## BRIGの実行ファイルのダウンロード
+下記のサイトにアクセスすると必要なファイルが自動的にダウンロードされる
+https://sourceforge.net/projects/brig/files/latest/download
+ダウンロードしたファイルをデスクトップに移動し、解凍する
+
