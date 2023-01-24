@@ -51,7 +51,7 @@ BRIGのGUIでの操作方法の詳細は下記の動画を参照
 https://www.youtube.com/watch?v=CTugtM1LR0M  
 
 BRIGの入力例  
-1. <img src="pics/brig1.png" width='25%'>2.<img src="pics/brig2.png" width='25%'>3.<img src="pics/brig3.png" width='25%'> 
+1. <img src="pics/brig1.png" height='200'>2.<img src="pics/brig2.png" width='25%'>3.<img src="pics/brig3.png" width='25%'> 
 
 ## BRIGの実行結果の一例  
 <img src="pics/strain_Hu17_ref.gb.jpg" width='60%'> 
