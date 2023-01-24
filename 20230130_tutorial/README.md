@@ -31,7 +31,7 @@ wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2
 **サンプルデータの取得**
 肺炎球菌参照ゲノムデータ:   
 https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP020549  
-肺炎球菌比較ゲノムデータ：
+肺炎球菌比較ゲノムデータ：  
 1:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018136  
 2:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018137  
 3:https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP018138   
