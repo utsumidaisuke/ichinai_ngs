@@ -13,16 +13,17 @@ fastq-dump --gzip --outdir fastq SRR13873708
 fastq-dump --gzip --split-files --outdir fastq SRR13873709
 ```
 
-## De novo assemly
+## De novo assembly
 
 **unicycler実行時の注意点**  
 M1 Macではunicyclerが正常に動作しない  
 メモリの小さい(4GB以下)だとunicyclerが途中で停止してしまう。  
 
 参考サイト  
-[Unicycler](https://github.com/rrwick/Unicycler)       
-FASTAファイル可視化ツール　　
+[Unicycler](https://github.com/rrwick/Unicycler)   
+De novo assemblyツール      
 [Bandage](https://rrwick.github.io/Bandage/)  
+FASTAファイル可視化ツール
 
 
 ## パイプライン
