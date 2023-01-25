@@ -34,7 +34,7 @@ trim_galore --paired fastq/SRR13873709_1.fastq.gz fastq/SRR13873709_2.fastq.gz
 
 **2. unicyclerでde novo assembly**  
 ```
-unicycler -1 SRR13873709_1_val_1.fq.gz -2 SRR13873709_2_val_2.fq.gz -l SRR13873708.fastq.gz --mode bold -o result
+unicycler -1 SRR13873709_1_val_1.fq.gz -2 SRR13873709_2_val_2.fq.gz -l fastq/SRR13873708.fastq.gz --mode bold -o result
 ```
 
 **3. prodigalで遺伝子了領域を予測**
