@@ -1,4 +1,4 @@
-# 20230130_tutorialの内容
+# BRIG_tutorialの内容
 **BRIG(BLAST Ring Image Generator)で複数の細菌ゲノムの比較**  
 
 ## BRIG
