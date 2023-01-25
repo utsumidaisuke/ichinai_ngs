@@ -42,6 +42,7 @@ trim_galore --paired fastq/SRR18253109_1.fastq.gz fastq/SRR18253109_2.fastq.gz
 ```
 
 **2. bwaでマッピング**  
+使用するスレッド数を増やす場合は-tオプションの数を変更する  
 ```
 bwa mem -M -t 1 -R "@RG\tID:genome_tuto\tSM:tuto\tPL:ILLUMINA\tLB:tuto" ref/streptococcus_pneumoniae.fna SRR18253109_1_val_1.fq.gz SRR18253109_2_val_2.fq.gz > sp.sam
 ```
