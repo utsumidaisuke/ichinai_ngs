@@ -11,3 +11,32 @@ fastq-dumpでfastqファイルをダウンロードし、fastqディレクトリ
 ```
 fastq-dump --gzip --outdir fastq SRR13873708
 fastq-dump --gzip --split-files --outdir fastq SRR13873709
+# De novo assemly
+
+## unicycler実行時の注意点
+M1 Macではunicyclerが正常に動作しない  
+メモリの小さい(4GB以下)だとunicyclerが途中で停止してしまう。  
+
+参考サイト  
+[Unicycler](https://github.com/rrwick/Unicycler)
+
+FAファイル可視化ツール　　
+[Bandage](https://rrwick.github.io/Bandage/)
+
+
+## パイプライン
+**1. アダプターのトリミング**   
+```
+trim_galore --paired fastq/SRR13873709_1.fastq.gz fastq/SRR13873709_2.fastq.gz
+```
+
+**2. unicyclerでde nobo assembly**  
+```
+unicycler -1 SRR13873709_1_val_1.fq.gz -2 SRR13873709_2_val_2.fq.gz -l SRR13873708.fastq.gz --mode bold -o result
+```
+
+**3. prodigalで遺伝子了領域を予測**
+```
+prodigal -i result/assembly.fasta -o result/sp.genes -a result/sp.faa
+```
+
