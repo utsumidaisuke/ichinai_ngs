@@ -26,7 +26,7 @@ unzip fastANI-Linux64-v1.33.zip
 install.packages("genoPlotR", repos="http://R-Forge.R-project.org")
 
 ```
-- assembly済みファイル(20221219_tutorialで作成)  
+- assembly済みファイル(02_unicycler_tutorialで作成)  
 ```
 assembly.fasta
 ```
