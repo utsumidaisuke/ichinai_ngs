@@ -29,6 +29,7 @@ gunzip ref/streptococcus_pneumoniae.gff.gz
 ```
 wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/076/835/GCF_002076835.1_ASM207683v1/GCF_002076835.1_ASM207683v1_genomic.fna.gz -O ref/streptococcus_pneumoniae.fna.gz
 gunzip ref/streptococcus_pneumoniae.fna.gz
+```
 
 ## マッピング
 肺炎球菌の参照ゲノム配列に対して、サンプルのリードをマッピングする
