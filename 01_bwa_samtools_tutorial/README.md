@@ -26,7 +26,7 @@ gunzip ref/streptococcus_pneumoniae.gff.gz
 wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/076/835/GCF_002076835.1_ASM207683v1/GCF_002076835.1_ASM207683v1_genomic.fna.gz -O ref/streptococcus_pneumoniae.fna.gz
 gunzip ref/streptococcus_pneumoniae.fna.gz
 ```
-fnaファイルのインデックスを作成
+fnaファイルのインデックスを作成  
 bwaでマッピングする際に必要となる
 ```
 bwa index ref/streptococcus_pneumoniae.fna
