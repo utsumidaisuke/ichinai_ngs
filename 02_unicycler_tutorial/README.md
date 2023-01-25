@@ -8,7 +8,7 @@ pdfディレクトリに利用したfastqファイルの元論文
 
 ## fastqファイルの取得
 fastq-dumpでfastqファイルをダウンロードし、fastqディレクトリに保存  
-SRR13873708: minionデータ
+SRR13873708: minionデータ  
 SRR13873709: illuminaデータ
 ```
 fastq-dump --gzip --outdir fastq SRR13873708
