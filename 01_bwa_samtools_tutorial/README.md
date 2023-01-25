@@ -29,3 +29,38 @@ gunzip ref/streptococcus_pneumoniae.gff.gz
 ```
 wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/076/835/GCF_002076835.1_ASM207683v1/GCF_002076835.1_ASM207683v1_genomic.fna.gz -O ref/streptococcus_pneumoniae.fna.gz
 gunzip ref/streptococcus_pneumoniae.fna.gz
+
+## マッピング
+肺炎球菌の参照ゲノム配列に対して、サンプルのリードをマッピングする
+**パイプライン**
+
+**1. アダプターのトリミング**   
+```
+trim_galore --paired SRR18253109_1.fastq.gz SRR18253109_2.fastq.gz
+```
+
+**2. bwaでマッピング**  
+```
+bwa mem -M -t 1 -R "@RG\tID:genome_tuto\tSM:tuto\tPL:ILLUMINA\tLB:tuto" ../ref/streptococcus_pneumoniae.fna SRR18253109_1_val_1.fq.gz SRR18253109_2_val_2.fq.gz > sp.sam
+```
+
+**3. samtoolsでsamファイルをbamファイルに変換**
+```
+samtools view -bS sp.sam > sp.bam
+```
+
+**4. bamファイルのソート**
+```
+samtools sort sp.bam > sp_sort.bam
+```
+
+**5. bamファイルのインデックスを作成**
+```
+samtools index sp_sort.bam
+```
+
+**6 sp_sort.bamをigvで閲覧**
+```
+igv
+```
+
