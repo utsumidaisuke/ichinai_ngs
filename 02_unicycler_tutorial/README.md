@@ -17,6 +17,7 @@ fastq-dump --gzip --split-files --outdir fastq SRR13873709
 
 ## De novo assembly
 unicyclerを用いてショートリードとロングリードをハイブリッドでde novo assemblyする  
+  
 **unicycler実行時の注意点**  
 M1 Macではunicyclerが正常に動作しない  
 メモリの小さい(4GB以下)だとunicyclerが途中で停止してしまう。  
