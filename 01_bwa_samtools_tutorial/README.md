@@ -13,7 +13,7 @@ fastq-dumpでfastqファイルをダウンロードし、fastqディレクトリ
 fastq-dump --gzip --split-files --outdir fastq SRR18253109
 ```
 
-## 参照ファイルの取得
+## 参照ゲノムファイルの取得
 fnaとgffファイルがダウンロード可能なサイト  
 https://www.ncbi.nlm.nih.gov/genome/?term=streptococcus%20pneumoniae  
 ダウンロードしたファイルはrefディレクトリに保存  
