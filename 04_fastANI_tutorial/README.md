@@ -6,7 +6,7 @@
 ダウンロード方法
 ```
 wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/076/835/GCF_002076835.1_ASM207683v1/GCF_002076835.1_ASM207683v1_genomic.fna.gz
-gunzip -c GCF_002076835.1_ASM207683v1_genomic.fna.gz > data/sp.ref.fna
+gunzip -c GCF_002076835.1_ASM207683v1_genomic.fna.gz > sp.ref.fna
 ```
 
 ## ゲノム比較ツール
