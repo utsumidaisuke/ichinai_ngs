@@ -22,7 +22,7 @@ unicyclerを用いてショートリードとロングリードをハイブリ�
 M1 Macではunicyclerが正常に動作しない  
 メモリの小さい(4GB以下)だとunicyclerが途中で停止してしまう。  
 
-参考サイト  
+**参考サイト**   
 [Unicycler](https://github.com/rrwick/Unicycler): De novo assemblyツール   
 [Bandage](https://rrwick.github.io/Bandage/): FASTAファイル可視化ツール  
 
