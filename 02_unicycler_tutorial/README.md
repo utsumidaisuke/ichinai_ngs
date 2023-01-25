@@ -1,4 +1,4 @@
-# 20221219_tutorialの内容  
+# unicycler_tutorialの内容  
 **肺炎球菌サンプルのde novo assembly**  
 参考論文のMinionとilluminaデータからunicyclerを使用し、de novo assemblyを行う
 
@@ -11,9 +11,11 @@ fastq-dumpでfastqファイルをダウンロードし、fastqディレクトリ
 ```
 fastq-dump --gzip --outdir fastq SRR13873708
 fastq-dump --gzip --split-files --outdir fastq SRR13873709
-# De novo assemly
+```
 
-## unicycler実行時の注意点
+## De novo assemly
+
+**unicycler実行時の注意点**  
 M1 Macではunicyclerが正常に動作しない  
 メモリの小さい(4GB以下)だとunicyclerが途中で停止してしまう。  
 
