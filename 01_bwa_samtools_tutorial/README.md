@@ -38,7 +38,7 @@ gunzip ref/streptococcus_pneumoniae.fna.gz
 
 **1. アダプターのトリミング**   
 ```
-trim_galore --paired SRR18253109_1.fastq.gz SRR18253109_2.fastq.gz
+trim_galore --paired fastq/SRR18253109_1.fastq.gz fastq/SRR18253109_2.fastq.gz
 ```
 
 **2. bwaでマッピング**  
