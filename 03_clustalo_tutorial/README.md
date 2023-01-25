@@ -1,4 +1,4 @@
-# 20221226_tutorialの内容
+# clustalo_tutorialの内容
 **Clustaloで複数のアミノ酸配列をアライメントする** 
 
 ## アライメントツール
