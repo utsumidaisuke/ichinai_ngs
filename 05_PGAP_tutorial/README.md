@@ -1,4 +1,4 @@
-# 20230123_tutorialの内容
+# PGAP_tutorialの内容
 **Prokaryotic Genome Annotation Pipeline(PGAP)で細菌ゲノムのアノテーション**  
 
 ## PGAP 
@@ -15,12 +15,12 @@ wget -c https://github.com/ncbi/pgap/blob/master/scripts/pgap.py
 chmod +x pgap.py
 pgap.py --update
 ```
-- assembly済みファイル(20221219_tutorialで作成した最長のcontigを利用) 
+**assembly済みファイル(20221219_tutorialで作成した最長のcontigを利用) **  
 ```
 assembly.fasta
 ```
 
-- input.yamlの内容
+**input.yamlの内容**  
 ```
 # vi input.yamlで下記を記載
 fasta:
@@ -31,7 +31,7 @@ submol:
   location: submol.yaml
 ```
 
-- submol.yamlの内容
+**submol.yamlの内容**  
 ```
 # vi submol.yamlで下記を記載
 topology: "circular"
