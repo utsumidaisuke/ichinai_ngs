@@ -15,7 +15,7 @@ wget -c https://github.com/ncbi/pgap/blob/master/scripts/pgap.py
 chmod +x pgap.py
 pgap.py --update
 ```
-**assembly済みファイル(20221219_tutorialで作成した最長のcontigを利用) **  
+**assembly済みファイル(20221219_tutorialで作成した最長のcontigを利用)**    
 ```
 assembly.fasta
 ```
