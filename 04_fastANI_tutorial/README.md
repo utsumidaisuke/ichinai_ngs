@@ -1,4 +1,4 @@
-# 20221226_tutorialの内容
+# fastANI_tutorialの内容
 **De novo assemblyで得たゲノム配列と肺炎球菌参照ゲノムの比較**  
 
 ## 肺炎球菌参照ゲノム
