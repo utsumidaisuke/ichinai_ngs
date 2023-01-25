@@ -1,2 +1,0 @@
-Bin Id	Marker lineage	# genomes	# markers	# marker sets	0	1	2	3	4	5+	Completeness	Contamination	Strain heterogeneity
-annotation	Streptococcus pneumoniae (6)	20	845	160	6	838	1	0	0	0	99.48	0.31	0.00
