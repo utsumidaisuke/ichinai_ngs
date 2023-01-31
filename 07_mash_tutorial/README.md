@@ -38,7 +38,7 @@ wget https://gembox.cbcb.umd.edu/mash/genome2.fna
 ```
 
 ### mashによる近似距離の計算
-mashの実行
+サンプルファイルを用いてmashの実行
 ```
 # mashの直前に"./"を入力する
 ./mash dist genome1.fna genome2.fna
