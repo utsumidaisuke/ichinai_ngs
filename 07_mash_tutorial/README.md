@@ -17,7 +17,7 @@ condaでインストールを行うと、実行の際にエラーが生じる
 wget -c https://github.com/marbl/Mash/releases/download/v2.3/mash-OSX64-v2.3.tar
 tar -xvf mash-OSX64-v2.3.tar
 ```
-**Linux: mash-Linux64-v2.3.tarのダウンロード**
+**Linux: mash-Linux64-v2.3.tarのダウンロードと解凍**
 ```
 wget -c https://github.com/marbl/Mash/releases/download/v2.3/mash-Linux64-v2.3.tar
 tar -xvf mash-Linux64-v2.3.tar
