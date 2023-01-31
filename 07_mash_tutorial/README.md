@@ -7,7 +7,7 @@
 [github](https://github.com/marbl/Mash)  
 [マニュアル](https://mash.readthedocs.io/en/latest/)  
 [参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/05/11/180244)  
-
+[元論文](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-0997-x)
 ## mashのインストール
 condaでインストールを行うと、実行の際にエラーが生じる  
 実行ファイルを[github](https://github.com/marbl/Mash/releases)からダウンロードする  
