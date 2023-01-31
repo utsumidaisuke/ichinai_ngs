@@ -22,7 +22,7 @@ Intel CPU用のインストーラのダウンロードしインストール
 ```
 wget -c https://download.oracle.com/java/19/latest/jdk-19_macos-x64_bin.dmg
 ```
-  
+    
 **BLASTのインストール**
 (サイト: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 Mac(M1,M2,Intel)用のインストーラのダウンロード  
@@ -34,7 +34,7 @@ wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2
 ### Linuxの下準備
 **javaのインストール(Linux)**  
 ```
- mamba install -c bioconda java-jdk
+mamba install -c bioconda java-jdk
 ```
   
 **BLASTのインストール(Linux)**  
