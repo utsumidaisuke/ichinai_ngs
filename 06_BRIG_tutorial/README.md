@@ -10,8 +10,9 @@
 ## 下準備
 javaやBLASTの設定を事前に行う必要あり
 
+### Macの下準備
 
-**javaのインストール(Mac)**  
+**javaのインストール**  
 (サイト: https://www.oracle.com/jp/java/technologies/downloads/#jdk19-mac)  
 M1,M2チップ用のインストーラのダウンロードしインストール  
 ```
@@ -22,6 +23,13 @@ Intel CPU用のインストーラのダウンロードしインストール
 wget -c https://download.oracle.com/java/19/latest/jdk-19_macos-x64_bin.dmg
 ```
   
+**BLASTのインストール(Mac)**
+(サイト: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+Mac(M1,M2,Intel)用のインストーラのダウンロード  
+解凍したファイルを実行しBLASTをインストールする  
+```
+wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2.13.0+.dmg
+```
 **javaのインストール(Linux)**  
 ```
  mamba install -c bioconda java-jdk
