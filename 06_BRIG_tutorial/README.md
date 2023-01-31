@@ -23,7 +23,7 @@ Intel CPU用のインストーラのダウンロードしインストール
 wget -c https://download.oracle.com/java/19/latest/jdk-19_macos-x64_bin.dmg
 ```
   
-**BLASTのインストール(Mac)**
+**BLASTのインストール**
 (サイト: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 Mac(M1,M2,Intel)用のインストーラのダウンロード  
 解凍したファイルを実行しBLASTをインストールする  
