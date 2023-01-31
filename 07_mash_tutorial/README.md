@@ -14,7 +14,7 @@ condaでインストールを行うと、実行の際にエラーが生じる
 **Mac: mash-OSX64-v2.3.tarのダウンロードと解凍**
 ```
 wget -c https://github.com/marbl/Mash/releases/download/v2.3/mash-OSX64-v2.3.tar
-tar -xvf mash-OSX64-v2.3.tar_
+tar -xvf mash-OSX64-v2.3.tar
 ```
 **Linux: mash-Linux64-v2.3.tarのダウンロード**
 ```
@@ -22,14 +22,22 @@ wget -c https://github.com/marbl/Mash/releases/download/v2.3/mash-Linux64-v2.3.t
 tar -xvf mash-Linux64-v2.3.tar
 ```
 
+## 解答したディレクトリに移動
+```
+# Linuxの場合
+# cd mash-Linux64-v2.3
+# Macの場合
+cd mash-OSX64-v2.3
+```
+
 ## サンプルファイルのダウンロード
 ```
-wget -c https://github.com/marbl/Mash/blob/master/test/genome1.fna
-wget -c https://github.com/marbl/Mash/blob/master/test/genome2.fna
-wget -c https://github.com/marbl/Mash/blob/master/test/genome3.fna
+wget https://gembox.cbcb.umd.edu/mash/genome1.fna
+wget https://gembox.cbcb.umd.edu/mash/genome2.fna
 ```
 
 ### mashによる近似距離の計算
 ```
-mash dist genome1.fna genome2.fna
+# mashの直前に"./"を入力する
+./mash dist genome1.fna genome2.fna
 ```
