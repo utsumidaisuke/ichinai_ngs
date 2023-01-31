@@ -68,6 +68,8 @@ mamba install -c bioconda trim-galore -y
 mamba install -c bioconda prodigal -y
 mamba install -c bioconda seqkit -y
 mamba install -c bioconda clustalo -y
+mamba install -c bioconda java-jdk
+mamba install -c bioconda blast
 mamba install -c r r -y
 ```
 igv: bamファイルの可視化  
