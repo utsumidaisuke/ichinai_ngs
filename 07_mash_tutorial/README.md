@@ -11,12 +11,12 @@
 ## mashのインストール
 condaでインストールを行うと、実行の際にエラーが生じる  
 実行ファイルを[github](https://github.com/marbl/Mash/releases)からダウンロードする  
-Mac: mash-OSX64-v2.3.tarのダウンロードと解凍
+**Mac: mash-OSX64-v2.3.tarのダウンロードと解凍**
 ```
 wget -c https://github.com/marbl/Mash/releases/download/v2.3/mash-OSX64-v2.3.tar
 tar -xvf mash-OSX64-v2.3.tar_
 ```
-Linux: mash-Linux64-v2.3.tarのダウンロード
+**Linux: mash-Linux64-v2.3.tarのダウンロード**
 ```
 wget -c https://github.com/marbl/Mash/releases/download/v2.3/mash-Linux64-v2.3.tar
 tar -xvf mash-Linux64-v2.3.tar
