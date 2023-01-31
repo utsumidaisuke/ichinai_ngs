@@ -22,7 +22,7 @@ wget -c https://github.com/marbl/Mash/releases/download/v2.3/mash-Linux64-v2.3.t
 tar -xvf mash-Linux64-v2.3.tar
 ```
 
-## 解答したディレクトリに移動
+## 解凍したディレクトリに移動
 ```
 # Linuxの場合
 # cd mash-Linux64-v2.3
@@ -37,7 +37,15 @@ wget https://gembox.cbcb.umd.edu/mash/genome2.fna
 ```
 
 ### mashによる近似距離の計算
+mashの実行
 ```
 # mashの直前に"./"を入力する
 ./mash dist genome1.fna genome2.fna
 ```
+  
+下記の表示がされれば成功  
+```
+Sketching genome1.fna (provide sketch file made with "mash sketch" to skip)...done.
+genome1.fna	genome2.fna	0.0222766	0	456/1000
+```
+
