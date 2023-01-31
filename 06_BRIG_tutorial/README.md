@@ -30,23 +30,19 @@ Mac(M1,M2,Intel)用のインストーラのダウンロード
 ```
 wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2.13.0+.dmg
 ```
+
+### Linuxの下準備
 **javaのインストール(Linux)**  
 ```
  mamba install -c bioconda java-jdk
 ```
   
-**BLASTのインストール(Mac)**  
-(サイト: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)   
-Mac(M1,M2,Intel)用のインストーラのダウンロード  
+**BLASTのインストール(Linux)**  
 ```
-wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2.13.0+.dmg
-```
-**BLASTのインストール(Linux)**
-```
-wget -c ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST//ncbi-blast-2.13.0+-x64-linux.tar.gz
+mamba install -c bioconda blast
 ```  
 
-**サンプルデータの取得**  
+### サンプルデータの取得  
 肺炎球菌参照ゲノムデータ:   
 https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP020549  
 肺炎球菌比較ゲノムデータ：  
