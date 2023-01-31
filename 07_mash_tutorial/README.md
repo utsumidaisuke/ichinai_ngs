@@ -4,9 +4,9 @@
 ## mash
 ゲノム配列の突然変異割合をもとにサンプル間の近似距離を測定する  
 
-[github](https://github.com/marbl/Mash)
-[マニュアル](https://mash.readthedocs.io/en/latest/)
-[参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/05/11/180244)
+[github](https://github.com/marbl/Mash)  
+[マニュアル](https://mash.readthedocs.io/en/latest/)  
+[参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/05/11/180244)  
 
 ## mashのインストール
 condaでインストールを行うと、実行の際にエラーが生じる  
