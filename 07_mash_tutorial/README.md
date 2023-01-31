@@ -25,10 +25,10 @@ tar -xvf mash-Linux64-v2.3.tar
 
 ## 解凍したディレクトリに移動
 ```
-# Linuxの場合
-# cd mash-Linux64-v2.3
 # Macの場合
 cd mash-OSX64-v2.3
+# Linuxの場合
+# cd mash-Linux64-v2.3
 ```
 
 ## サンプルファイルのダウンロード
