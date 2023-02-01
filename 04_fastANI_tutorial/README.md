@@ -24,8 +24,8 @@ assembly.fasta
 ```
 
 ## 肺炎球菌参照ゲノムの取得
-[参考サイト](https://www.ncbi.nlm.nih.gov/genome/176)
-ダウンロードと解凍
+[参考サイト](https://www.ncbi.nlm.nih.gov/genome/176)  
+ダウンロードと解凍  
 ```
 wget -c https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/076/835/GCF_002076835.1_ASM207683v1/GCF_002076835.1_ASM207683v1_genomic.fna.gz
 gunzip -c GCF_002076835.1_ASM207683v1_genomic.fna.gz > sp.ref.fna
