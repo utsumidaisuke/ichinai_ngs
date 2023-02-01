@@ -2,7 +2,7 @@
 **Clustaloで複数のアミノ酸配列をアライメントする** 
 
 ## clastalo
-複数配列のアラインメント（MSA）を作成するためのパッケージ
+複数配列のアラインメント（MSA）を作成  
   
 [参考サイト](https://www.ebi.ac.uk/Tools/msa/clustalo/)  
 [macでインフォマティクス](https://kazumaxneo.hatenablog.com/entry/2020/07/30/073000)  
