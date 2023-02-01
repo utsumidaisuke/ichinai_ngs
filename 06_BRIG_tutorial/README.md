@@ -4,7 +4,7 @@
 ## BRIG
 複数のfasta,fna,gbkファイル形式の最近ゲノムやプラスミドを読み込み、参照配列と比較を行う  
 [参考サイト](https://brig.sourceforge.net/)    
-[参考githubサイト](https://github.com/happykhan/BRIG)  
+[github](https://github.com/happykhan/BRIG)  
 
 
 ## 下準備
