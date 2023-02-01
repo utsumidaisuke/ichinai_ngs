@@ -2,6 +2,10 @@
 **肺炎球菌サンプルのde novo assembly**  
 参考論文のMinionとilluminaデータからunicyclerを使用し、de novo assemblyを行う
 
+## unicycler
+ショートリードとロングリードからde novo assemblyを行いバクテリアゲノム配列を決定する
+[github](https://github.com/rrwick/Unicycler)  
+
 ## 参考論文  
 [Complete Genome Sequence of Streptococcus pneumoniae Strain Rx1, a Hex Mismatch Repair-Deficient Standard Transformation Recipient](https://pubmed.ncbi.nlm.nih.gov/34647809/)
 pdfディレクトリに利用したfastqファイルの元論文
