@@ -3,7 +3,7 @@
 参考論文のMinionとilluminaデータからunicyclerを使用し、de novo assemblyを行う
 
 ## unicycler
-ショートリードとロングリードからde novo assemblyを行いバクテリアゲノム配列を決定する
+ショートリードとロングリードからde novo assemblyを行いバクテリアゲノム配列を決定する  
 [github](https://github.com/rrwick/Unicycler)  
 
 ## 参考論文  
