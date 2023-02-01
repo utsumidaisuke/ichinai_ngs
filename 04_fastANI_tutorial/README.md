@@ -6,6 +6,9 @@
 [github](https://github.com/ParBLiSS/FastANI)  
 [参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/09/14/141442)  
 
+## 注意点
+M1, M2 Macでは動作せず  
+  
 ## 下準備
 **fastANIの実行ファイルのダウンロード**  
 ```
