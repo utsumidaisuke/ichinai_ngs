@@ -2,8 +2,8 @@
 **De novo assemblyで得たゲノム配列と肺炎球菌参照ゲノムの比較**  
 
 ## fastANI
-[github](https://github.com/ParBLiSS/FastANI)
-[参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/09/14/141442)
+[github](https://github.com/ParBLiSS/FastANI)  
+[参考サイト](https://kazumaxneo.hatenablog.com/entry/2018/09/14/141442)  
 
 ## 下準備
 **fastANIの実行ファイルのダウンロード**  
