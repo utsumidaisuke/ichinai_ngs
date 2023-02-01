@@ -26,10 +26,6 @@ unicyclerを用いてショートリードとロングリードをハイブリ�
 M1 Macではunicyclerが正常に動作しない  
 メモリの小さい(4GB以下)だとunicyclerが途中で停止してしまう。  
 
-**参考サイト**   
-[Unicycler](https://github.com/rrwick/Unicycler): De novo assemblyツール   
-[Bandage](https://rrwick.github.io/Bandage/): FASTAファイル可視化ツール  
-
 ## パイプライン
 **1. アダプターのトリミング**   
 ```
@@ -46,3 +42,5 @@ unicycler -1 SRR13873709_1_val_1.fq.gz -2 SRR13873709_2_val_2.fq.gz -l fastq/SRR
 prodigal -i result/assembly.fasta -o result/sp.genes -a result/sp.faa
 ```
 
+## assemblyされた配列をBandage可視化  
+[Bandage](https://rrwick.github.io/Bandage/): FASTAファイル可視化ツール
