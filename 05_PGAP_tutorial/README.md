@@ -4,7 +4,7 @@
 ## PGAP 
 細菌ゲノムに対して遺伝子の検出やアノテーション、Genebank形式のファイルの出力をおこなう   
 [参考サイト](https://www.ncbi.nlm.nih.gov/genome/annotation_prok/)  
-[参考githubサイト](https://github.com/ncbi/pgap)
+[github](https://github.com/ncbi/pgap)
 
 
 ## 下準備
