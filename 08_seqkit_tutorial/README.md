@@ -1,10 +1,10 @@
 # seqkit_tutorialの内容
 **seqkitでfasta、fastqファイルの操作**  
 
-## mash
+## seqkit
 fasta、fastqファイルから特定の配列、情報を抽出する  
 
-[github](https://github.com/shenwei356/seqkit) 
+[github](https://github.com/shenwei356/seqkit)   
 [参考サイト1](https://kazumaxneo.hatenablog.com/entry/2017/08/08/235042)  
 [参考サイト2](https://bioinfo-nanihitotsu.weebly.com/software/category/seqkit)  
 
@@ -13,7 +13,7 @@ fasta、fastqファイルから特定の配列、情報を抽出する
 mamba install -c bioconda seqkit
 ```
   
-##具体的な使用方法##
+## 具体的な使用方法
 **IDリストから配列を抽出する**
 ```
 seqkit grep -f list.txt input.fasta.gz
