@@ -2,7 +2,7 @@
 **seqkitでfasta、fastqファイルの操作**  
 
 ## seqkit
-fasta、fastqファイルから特定の配列、情報を抽出する 
+fasta、fastqファイルから特定の配列、情報を抽出する   
 [github](https://github.com/shenwei356/seqkit)   
 [参考サイト1](https://kazumaxneo.hatenablog.com/entry/2017/08/08/235042)  
 [参考サイト2](https://bioinfo-nanihitotsu.weebly.com/software/category/seqkit)  
