@@ -24,7 +24,7 @@ seqkit seq -n virus.fna.gz
 seqkit seq -n virus.fna.gz > list.txt
 ```
 
-**IDリストから配列を抽出する**
+**IDリストから当該IDの配列を抽出する**
 ```
 seqkit grep -f list.txt virus.fna.gz
 ```
