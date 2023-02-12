@@ -21,7 +21,6 @@ virus.fna.gz: 30のウイルスゲノム配列が保存されているファイ�
 **配列IDの抽出**
 ```
 seqkit seq -n virus.fna.gz
-seqkit seq -n virus.fna.gz > list.txt
 ```
 
 **IDリストから当該IDの配列を抽出する**
