@@ -16,8 +16,6 @@ mamba install -c bioconda seqkit
 virus.fna.gz: 30のウイルスゲノム配列が保存されているファイル  
 
 ## 具体的な使用方法
-**IDリストから配列を抽出する**
-
 **配列IDの抽出**
 ```
 seqkit seq -n virus.fna.gz
@@ -30,7 +28,7 @@ seqkit grep -f list.txt virus.fna.gz
 
 **特定の文字列を含むIDの配列を抽出**
 ```
-seqkit grep -nrp string input.fasta
+seqkit grep -nrp NC_013590.2 input.fasta
 ```
 
 **fastaファイル内のIDの抽出**
