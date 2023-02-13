@@ -53,8 +53,8 @@ sudo apt install sra-toolkit
 ## 仮想環境の構築 (MacとWindows共通)
 - mambaで仮想環境を設定し立ち上げる
 ```
-mamba create -n strP python=3.10
-mamba activate strP
+mamba create -n ngs python=3.10
+mamba activate ngs
 ```
 
 - 必要なツールのインストールをmambaで行う
