@@ -14,14 +14,16 @@ https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP007748&o=acc_s%3Aa
 **samples.txt**: 論文内で解析されているすべてのサンプルのDRRのIDを記載   
 
 ## 解析のフロー
-1. parallel-fastq-dumpを使いfastqファイルの取得 
+1. parallel-fastq-dumpを使い各サンプルのfastqファイルの取得 
 2. shovillでDe novo assembly  
 
 
 
-## 各サンプルのfastqファイルの取得
+### 1. parallel-fastq-dumpを使い各サンプルのfastqファイルの取得
 DRRのID(samples.txt)をもとにparallel-fastq-dumpを使ってfastq.gzファイルをダウンロード  
 ダウンロード後のファイル合計サイズは58G程度  
 ```
 parallel -j 5 parallel-fastq-dump --threads 8 --split-files --gzip --outdir fastq --sra-id {} :::: sample.txt
 ```
+
+### 2. shovillでDe novo assembly
