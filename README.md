@@ -76,7 +76,6 @@ mamba install -c bioconda clustalo -y
 mamba install -c bioconda java-jdk -y
 mamba install -c bioconda blast -y
 mamba install -c bioconda ncbi-genome-download -y
-mamba install -c bioconda shovill -y
 mamba install -c r r -y
 ```
 igv: bamファイルの可視化  
