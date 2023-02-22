@@ -65,7 +65,8 @@ mamba activate ngs
 ```
 mamba install -c bioconda igv -y
 mamba install -c bioconda bwa -y
-mamba install -c bioconda spades -y
+mamba install -c bioconda spades -y  
+mamba install -c bioconda shovill -y  
 mamba install -c bioconda unicycler -y
 mamba install -c bioconda samtools -y
 mamba install -c bioconda trim-galore -y
@@ -75,12 +76,14 @@ mamba install -c bioconda clustalo -y
 mamba install -c bioconda java-jdk -y
 mamba install -c bioconda blast -y
 mamba install -c bioconda ncbi-genome-download -y
+mamba install -c bioconda shovill -y
 mamba install -c r r -y
 ```
 igv: bamファイルの可視化  
 bwa: fastqファイルのマッピング  
 spades: De novo assembly  
 unicycler: De novo assembly  
+shovill: De novo assembly  
 samtools: bam、samファイル操作  
 trim-galore: リードデータからアダプタ配列を除去  
 prodigal: ゲノム配列から遺伝子領域を予測   
