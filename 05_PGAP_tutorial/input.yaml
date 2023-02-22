@@ -1,6 +1,0 @@
-fasta:
-  class: File
-  location: assembly.fasta
-submol:
-  class: File
-  location: submol.yaml
