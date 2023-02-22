@@ -7,7 +7,10 @@
 肺炎桿菌ゲノムをショート・ロングリードでDe novo assemblyし配列を決定  
 genotypeごとに分類
 
-## fastqファイルの取得
+## 論文内のサンプルデータ情報
+https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP007748&o=acc_s%3Aa
+
+## 各サンプルのfastqファイルの取得
 ```
 parallel -j 5 parallel-fastq-dump --threads 8 --split-files --gzip --outdir fastq --sra-id {} :::: sample.txt
 ```
