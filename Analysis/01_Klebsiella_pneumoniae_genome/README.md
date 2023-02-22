@@ -14,7 +14,8 @@ https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP007748&o=acc_s%3Aa
 **samples.txt**: 論文内で解析されているすべてのサンプルのDRRのIDを記載   
 
 ## 解析のフロー
-1. fastqファイルの取得  
+1. parallel-fastq-dumpを使いfastqファイルの取得 
+2. shovillでDe novo assembly  
 
 
 
