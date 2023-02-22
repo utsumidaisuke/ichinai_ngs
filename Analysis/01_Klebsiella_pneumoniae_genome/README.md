@@ -8,3 +8,6 @@
 genotypeごとに分類
 
 ## fastqファイルの取得
+```
+parallel -j 5 parallel-fastq-dump --threads 8 --split-files --gzip --outdir fastq --sra-id {} :::: sample.txt
+```
