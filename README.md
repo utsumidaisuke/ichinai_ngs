@@ -32,6 +32,7 @@ brew install parallel
 ```
 sratoolkit: fastqファイルをダウンロード  
 wget: コマンドラインでファイルをダウンロード  
+parallel: コマンド実行の並列化
 <br>  
 
 ### Windows Linuxの場合
@@ -55,6 +56,9 @@ sudo apt update
 sudo apt install sra-toolkit
 sudo apt install parallel
 ```
+sratoolkit: fastqファイルをダウンロード  
+wget: コマンドラインでファイルをダウンロード  
+parallel: コマンド実行の並列化
 
 ## 仮想環境の構築 (MacとWindows共通)
 - mambaで仮想環境を設定し立ち上げる
