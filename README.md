@@ -28,6 +28,7 @@ mambaのインストールが終了したら、一度ターミナルを閉じて
 ```
 brew install sratoolkit  
 brew install wget  
+brew install parallel
 ```
 sratoolkit: fastqファイルをダウンロード  
 wget: コマンドラインでファイルをダウンロード  
@@ -52,6 +53,7 @@ mambaのインストールが終了したら、一度ターミナルを閉じて
 ```
 sudo apt update
 sudo apt install sra-toolkit
+sudo apt install parallel
 ```
 
 ## 仮想環境の構築 (MacとWindows共通)
@@ -76,6 +78,7 @@ mamba install -c bioconda clustalo -y
 mamba install -c bioconda java-jdk -y
 mamba install -c bioconda blast -y
 mamba install -c bioconda ncbi-genome-download -y
+mamaba install -c bioconda parallel-fastq-dump -y
 mamba install -c r r -y
 ```
 igv: bamファイルの可視化  
@@ -91,4 +94,5 @@ clustalo: 塩基・アミノ酸のアライメント
 java-jdk: javaを実行するためのパッケージ  
 blast: 塩基・アミノ酸のアライメント  
 ncbi-genome-download: NCBIからゲノムデータを取得  
+parallel-fastq-dump: SRAファイルの高速ダウンロード
 r: R言語 
