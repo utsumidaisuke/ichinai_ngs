@@ -11,8 +11,17 @@ genotypeごとに分類
 https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP007748&o=acc_s%3Aa
 
 ## 上記のサイトの情報をもとにDRRのIDリストを作成した
-**samples.txt**: 論文内で解析されているすべてのサンプルのDRRのIDを記載   
+**samples.txt**: 論文内で解析されているすべてのサンプルのDRRのIDを記載  
 
+## 解析の下準備
+Rast-tkの設定
+https://github.com/TheSEED/RASTtk-Distribution/releases  
+上記サイトからrasttk-v1.3.0.debをダウンロード  
+```
+# 一行目のコマンドで多くのエラーが出力されるが、気にせず二行目を実行
+sudo dpkg -i rasttk-v1.2.0.deb 
+sudo apt-get install -f
+```
 ## 解析のフロー
 1. parallel-fastq-dumpを使い各サンプルのfastqファイルの取得 
 2. shovillでDe novo assembly  
