@@ -36,3 +36,6 @@ parallel -j 5 parallel-fastq-dump --threads 8 --split-files --gzip --outdir fast
 ```
 
 ### 2. shovillでDe novo assembly
+```
+shovill --outdir DRR320006 --R1 fastq/DRR320006_1.fastq.gz --R2 fastq/DRR320006_2.fastq.gz --ram 8 --cpus 4
+```
