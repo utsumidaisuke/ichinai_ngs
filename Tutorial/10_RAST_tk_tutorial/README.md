@@ -2,7 +2,7 @@
 **バクテリアゲノムの配列情報をもとにアノテーションを行う**  
 
 ## RAST-tk
-バクテリアゲノムアノテーションツール
+バクテリアゲノムアノテーションツール    
 [参考サイト1](https://www.bv-brc.org/docs//cli_tutorial/rasttk_getting_started.html)  
 
 ## BV-BRCのインストール
@@ -23,7 +23,7 @@ sudo gdebi bvbrc-cli-1.040.deb
 [参考サイト](https://www.bv-brc.org/docs//cli_tutorial/rasttk_getting_started.html)  
 解析の流れは下記の通り
 1. contigファイルのフォーマット  
-2. ゲノムのあのテーテョン
+2. ゲノムのアノテーテョン
 3. 形式を指定し出力
 
 ## 具体的な使用方法
