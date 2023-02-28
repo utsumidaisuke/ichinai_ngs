@@ -1,5 +1,5 @@
 # Kleborate_tutorialの内容
-**Klebsiella pneumoniaeのMLSTタイプ、種の決定、薬剤耐性遺伝子の同定を行う**  
+**Klebsiella pneumoniaeのMLSTタイプ、種の決定、薬剤耐性遺伝子の同定などを行う**  
 
 ## Kleborate
 アセンブリされたKlebsiella pneumoniaeのタイピングツール    
