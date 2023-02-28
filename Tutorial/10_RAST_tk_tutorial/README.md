@@ -34,9 +34,9 @@ rast-create-genome --scientific-name "Klebsiella pneumoniae" --genetic-code 11 -
 ```
 2. ゲノムのアノテーテョン
 ```
-rast-process-genome < K_pneumoniae.gto > K_pneumoniae.gto2
+rast-process-genome -i K_pneumoniae.gto -o K_pneumoniae.gto2
 ```
 3. 形式を指定し出力
 ```
-
+rast-export-genome genbank -i K_pneumoniae.gto2 -o K_pneumoniae.gbk
 ```
