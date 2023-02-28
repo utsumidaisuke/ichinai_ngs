@@ -28,7 +28,15 @@ sudo gdebi bvbrc-cli-1.040.deb
 
 ## 具体的な使用方法
 **Klebsiella pneumoniaeのゲノムをアノテーション**
+1. contigファイルのフォーマット
 ```
-rast-create-genome --scientific-name "Klebsiella pneumoniae" --genetic-code 11 --domain Bacteria --contigs K_pneumoniae.contig > K_pneumonniae.gto
+rast-create-genome --scientific-name "Klebsiella pneumoniae" --genetic-code 11 --domain Bacteria --contigs K_pneumoniae.contig > K_pneumoniae.gto
+```
+2. ゲノムのアノテーテョン
+```
+rast-process-genome < K_pneumoniae.gto > K_pneumoniae.gto2
+```
+3. 形式を指定し出力
 ```
 
+```
