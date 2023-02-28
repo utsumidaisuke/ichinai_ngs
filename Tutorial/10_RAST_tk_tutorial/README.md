@@ -3,7 +3,7 @@
 
 ## RAST-tk
 バクテリアゲノムアノテーションツール    
-[参考サイト1](https://www.bv-brc.org/docs//cli_tutorial/rasttk_getting_started.html)  
+[参考サイト](https://www.bv-brc.org/docs//cli_tutorial/rasttk_getting_started.html)  
 
 ## BV-BRCのインストール
 RAST-tkはBV-BRCパッケージに含まれている  
