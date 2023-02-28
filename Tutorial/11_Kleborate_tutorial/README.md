@@ -27,5 +27,5 @@ kleborate -h
 ## 具体的な使用方法
 **Klebsiella pneumoniaeのゲノムのタイピング**
 ```
-kleborate -a K_pneumoniae.contig --all -o K_pneumoniae_result.txt
+kleborate -a contigs.fa --all -o contigs_result.txt
 ```
