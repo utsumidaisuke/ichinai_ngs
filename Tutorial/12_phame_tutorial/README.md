@@ -46,6 +46,7 @@ contigファイルはworkdirに保存
 ctlファイルの記載方法の詳細は下記のサイトを参照  
 [参照サイト](https://phame.readthedocs.io/en/latest/usage/cases.html#with-complete-genomes-and-contigs)
 
+## phameの実行  
 **コンテナの起動**  
 phameのイメージからコンテナを生成し、実行（現在のディレクトリをコンテナの/homeにマウント）
 コマンドの"e53ed3952a43"部分は、上記のIMAGE IDに対応
