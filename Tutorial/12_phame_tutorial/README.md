@@ -1,4 +1,4 @@
-# phameの内容
+i# phameの内容
 **assemblyされたcontigファイルをもとに系統樹作成のためのfasttreeファイルを作成する**  
 
 ## phame
@@ -60,3 +60,10 @@ docker run -v $(pwd):/home --rm -it e53ed3952a43  /bin/bash
 cd /home
 phame Kp.ctl
 ```
+
+**系統樹作成に必要な出力ファイル**
+```
+workdir/results/trees/Kp_all.fasttre
+```
+上記のファイルをFigTreeで表示  
+[FigTree](https://github.com/rambaut/figtree/releases): アプリのダウンロード(JAVAのインストールが必要)
