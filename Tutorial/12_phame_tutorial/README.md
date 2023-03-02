@@ -32,11 +32,6 @@ docker images
 REPOSITORY                    TAG        IMAGE ID       CREATED       SIZE
 quay.io/biocontainers/phame   1.0.3--0   e53ed3952a43   4 years ago   1.45GB
 ```
-phameのイメージからコンテナを生成し、実行（現在のディレクトリをコンテナの/homeにマウント）  
-コマンドの"e53ed3952a43"部分は、上記のIMAGE IDに対応  
-```
-docker run -v $(pwd):/home --rm -it e53ed3952a43  /bin/bash
-```
 
 ## phame実行の下準備
 phame実行には下記のファイルの準備が必要  
@@ -51,3 +46,9 @@ contigファイルはworkdirに保存
 ctlファイルの記載方法の詳細は下記のサイトを参照  
 [参照サイト](https://phame.readthedocs.io/en/latest/usage/cases.html#with-complete-genomes-and-contigs)
 
+**コンテナの起動**  
+phameのイメージからコンテナを生成し、実行（現在のディレクトリをコンテナの/homeにマウント）
+コマンドの"e53ed3952a43"部分は、上記のIMAGE IDに対応
+```
+docker run -v $(pwd):/home --rm -it e53ed3952a43  /bin/bash
+```
