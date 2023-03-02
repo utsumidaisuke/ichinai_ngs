@@ -37,11 +37,13 @@ docker run -v $(pwd):/home --rm -it e53ed3952a43  /bin/bash
 ```
 
 ## phameの下準備
-phame実行には下記のファイルの準備が必要  
+phame実行には下記のファイルの準備が必要（拡張子を正確に記載しないとエラーを起こす）  
 1. referenceとなる完全長のゲノム配列  
 NCBIのデータベースなどからfastaファイル形式で準備(拡張子:fasta)  
+referenceファイルはrefdirディレクトリに保存
 2. 比較するassemblyずみのcontig  
-複数のコンティグを一つにまとめたファイル(拡張書:contig)  
-3. phameの環境設定ファイルのXXX.ctlファイル  
+複数のコンティグを一つにまとめたファイル(拡張子:contig)  
+contigファイルはworkdirに保存
+3. phameの環境設定ファイルのXXX.ctlファイル（拡張子:ctl）  
 
 
