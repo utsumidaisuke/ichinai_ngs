@@ -37,7 +37,7 @@ phameのイメージからコンテナを生成し、実行（現在のディレ
 docker run -v $(pwd):/home --rm -it e53ed3952a43  /bin/bash
 ```
 
-## phameの下準備
+## phame実行の下準備
 phame実行には下記のファイルの準備が必要  
 拡張子を正確に記載しないとエラーが起きる  
 1. referenceとなる完全長のゲノム配列  
