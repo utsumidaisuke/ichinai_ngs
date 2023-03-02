@@ -17,6 +17,8 @@
 **注意点**：  
 condaでのインストールは依存関係の解消が困難  
 dockerを利用するのが簡単  
+dockerのインストール方法  
+[参考サイト](https://kinsta.com/jp/blog/install-docker-ubuntu/)  
 
 ### dockerの準備  
 dockerイメージの取得  
