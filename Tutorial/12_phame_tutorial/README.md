@@ -11,7 +11,7 @@
 condaでのインストールは依存関係の解消が困難  
 dockerを利用するのが簡単  
 
-**dockerの準備**  
+### dockerの準備  
 dockerイメージの取得  
 ```
 docker pull quay.io/biocontainers/phame:1.0.3--0
