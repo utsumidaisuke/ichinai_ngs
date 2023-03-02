@@ -1,5 +1,5 @@
   refdir = refdir  # directory where reference (Complete) files are located
-  workdir = workdir2 # directory where contigs/reads files are located and output is stored
+  workdir = workdir # directory where contigs/reads files are located and output is stored
 
 reference = 1  # 0:pick a random reference from refdir; 1:use given reference; 2: use ANI based reference
   reffile = Kp.fasta  # reference filename when option 1 is chosen

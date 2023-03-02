@@ -45,5 +45,6 @@ referenceファイルはrefdirディレクトリに保存
 複数のコンティグを一つにまとめたファイル(拡張子:contig)  
 contigファイルはworkdirに保存
 3. phameの環境設定ファイルのXXX.ctlファイル（拡張子:ctl）  
-
+ctlファイルの記載方法の詳細は下記のサイトを参照  
+[参照サイト](https://phame.readthedocs.io/en/latest/usage/cases.html#with-complete-genomes-and-contigs)
 
