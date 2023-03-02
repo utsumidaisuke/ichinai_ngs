@@ -3,6 +3,11 @@
 
 ## phame
 系統樹作成支援ツール  
+1.完全なゲノム配列  
+2.contig配列  
+3.生データのfastqファイル  
+複数のファイルから系統樹の作成に必要なデータを生成する  
+1,2,3のそれぞれでも、組わせでもデータの生成は可能  
 [github](https://github.com/LANL-Bioinformatics/PhaME)   
 [参考サイト](https://phame.readthedocs.io/en/latest/)  
 
@@ -25,19 +30,10 @@ docker images
 REPOSITORY                    TAG        IMAGE ID       CREATED       SIZE
 quay.io/biocontainers/phame   1.0.3--0   e53ed3952a43   4 years ago   1.45GB
 ```
-phameのイメージからコンテナを生成（現在のディレクトリをコンテナの/homeにマウント）  
+phameのイメージからコンテナを生成し、実行（現在のディレクトリをコンテナの/homeにマウント）  
 ```
 docker run -v $(pwd):/home --rm -it e53ed3952a43  /bin/bash
 ```
 
+## phame使用方法の概略
 
-
-
-
-## Kleborateの使用方法の概略
-
-## 具体的な使用方法
-**Klebsiella pneumoniaeのゲノムのタイピング**
-```
-kleborate -a contigs.fa --all -o contigs_result.txt
-```
