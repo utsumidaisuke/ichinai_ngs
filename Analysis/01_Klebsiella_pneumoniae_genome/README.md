@@ -25,7 +25,8 @@ sudo apt-get install -f
 ## 解析のフロー
 1. parallel-fastq-dumpを使い各サンプルのfastqファイルの取得 
 2. shovillでDe novo assembly  
-
+3. phameで系統樹作成に必要なfasttreeファイルを作成
+4. FigTreeでfasttreeファイルから系統樹を作成
 
 
 ### 1. parallel-fastq-dumpを使い各サンプルのfastqファイルの取得
@@ -41,4 +42,7 @@ shovill --outdir DRR320006 --R1 fastq/DRR320006_1.fastq.gz --R2 fastq/DRR320006_
 ```
 
 ### 3. phameで系統樹作成に必要なfasttreeファイルを作成
-[phameの実行](https://github.com/utsumidaisuke/ichinai_ngs/tree/main/Tutorial/12_phame_tutorial)
+[phameの実行](https://github.com/utsumidaisuke/ichinai_ngs/tree/main/Tutorial/12_phame_tutorial)  
+
+### 4. FigTreeでfasttreeファイルから系統樹を作成
+[FigTree](https://github.com/rambaut/figtree/releases)
