@@ -5,11 +5,11 @@
 **系統樹作成支援ツール**   
 [github](https://github.com/LANL-Bioinformatics/PhaME)  
 [参考サイト](https://phame.readthedocs.io/en/latest/)  
+下記の種類の複数のファイルから系統樹の作成に必要なデータを生成する  
 1. 完全なゲノム配列  
 2. contig配列  
 3. 生データのfastqファイル 
 
-複数のファイルから系統樹の作成に必要なデータを生成する  
 1,2,3のそれぞれでも、組わせでもデータの生成は可能   
 ここでは1,2からのデータ生成の説明をする  
 
