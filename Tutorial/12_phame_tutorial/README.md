@@ -7,7 +7,8 @@
 2.contig配列  
 3.生データのfastqファイル  
 複数のファイルから系統樹の作成に必要なデータを生成する  
-1,2,3のそれぞれでも、組わせでもデータの生成は可能  
+1,2,3のそれぞれでも、組わせでもデータの生成は可能   
+ここでは1,2からのデータ生成の説明をする  
 [github](https://github.com/LANL-Bioinformatics/PhaME)   
 [参考サイト](https://phame.readthedocs.io/en/latest/)  
 
@@ -35,5 +36,12 @@ phameのイメージからコンテナを生成し、実行（現在のディレ
 docker run -v $(pwd):/home --rm -it e53ed3952a43  /bin/bash
 ```
 
-## phame使用方法の概略
+## phameの下準備
+phame実行には下記のファイルの準備が必要  
+1. referenceとなる完全長のゲノム配列  
+NCBIのデータベースなどからfastaファイル形式で準備(拡張子:fasta)  
+2. 比較するassemblyずみのcontig  
+複数のコンティグを一つにまとめたファイル(拡張書:contig)  
+3. phameの環境設定ファイルのXXX.ctlファイル  
+
 
