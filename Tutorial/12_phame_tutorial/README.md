@@ -27,12 +27,13 @@ dockerイメージのIDの確認
 ```
 docker images
 ```
-下記の表示がされるのでphameのIMAGAE IDを確認
+下記の表示がされるのでphameのIMAGAE IDを確認  
 ```
 REPOSITORY                    TAG        IMAGE ID       CREATED       SIZE
 quay.io/biocontainers/phame   1.0.3--0   e53ed3952a43   4 years ago   1.45GB
 ```
 phameのイメージからコンテナを生成し、実行（現在のディレクトリをコンテナの/homeにマウント）  
+コマンドの"e53ed3952a43"部分は、上記のIMAGE IDの文字列を記載  
 ```
 docker run -v $(pwd):/home --rm -it e53ed3952a43  /bin/bash
 ```
