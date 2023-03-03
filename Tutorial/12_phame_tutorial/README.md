@@ -5,6 +5,7 @@ i# phameの内容
 **系統樹作成支援ツール**   
 [github](https://github.com/LANL-Bioinformatics/PhaME)  
 [参考サイト](https://phame.readthedocs.io/en/latest/)  
+[元論文](https://www.nature.com/articles/s41598-020-58356-1)  
 下記の種類の複数のファイルから系統樹の作成に必要なデータを生成する  
 1. 完全なゲノム配列  
 2. contig配列  
