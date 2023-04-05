@@ -24,9 +24,9 @@ mamba install -c bioconda seqkit -y
 mamba install -c conda-forge gsl=2.5 -y
 
 ### Kleborateおよび必要なライブラリのインストール
-mamba install biopython -y
-mamba install blast -y
-mamba install mash -y
+mamba install -c conda-forge biopython -y
+mamba install -c bioconda blast -y
+mamba install -c bioconda mash -y
 cd config
 git clone --recursive https://github.com/katholt/Kleborate.git
 cd Kleborate/kaptive
