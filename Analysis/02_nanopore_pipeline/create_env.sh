@@ -6,10 +6,8 @@ sudo apt -y install $i
 done
 
 ### guppyのインストール (GPUの設定が必要)
-```
 wget -c https://cdn.oxfordnanoportal.com/software/analysis/ont_guppy_6.4.6-1~focal_amd64.deb
 sudo apt install ./ont_guppy_6.4.6-1~focal_amd64.deb
-```
 
 ### RAST-tkのインストール
 curl -O -L https://github.com/BV-BRC/BV-BRC-CLI/releases/download/1.040/bvbrc-cli-1.040.deb
