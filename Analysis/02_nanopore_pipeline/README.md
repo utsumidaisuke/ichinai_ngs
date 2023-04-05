@@ -12,6 +12,5 @@ minionから出力されたfast5ファイルをもとにした解析パイプラ
 8. RAST-tkで遺伝子領域のアノテーション
 
 ## 各種ツールの下準備と関連情報
-**guppy**  
-[サイト](https://community.nanoporetech.com/downloads)  
-GPUの設定が必要
+### guppy (GPUの設定が必要)   
+[サイト](https://community.nanoporetech.com/downloads): 環境にあったインストーラーをダウンロード  
