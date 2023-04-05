@@ -2,10 +2,14 @@
 sudo apt update
 for i in bzip2 g++ zlib1g-dev libbz2-dev liblzma-dev libffi-dev libncurses5-dev libcurl4-gnutls-dev libssl-dev curl make cmake wget python3-all-dev gdebi-core
 do
-sudo apt install $i
+sudo apt -y install $i
 done
 
 ### guppyのインストール (GPUの設定が必要)
+```
+wget -c https://cdn.oxfordnanoportal.com/software/analysis/ont_guppy_6.4.6-1~focal_amd64.deb
+sudo apt install ./ont_guppy_6.4.6-1~focal_amd64.deb
+```
 
 ### RAST-tkのインストール
 curl -O -L https://github.com/BV-BRC/BV-BRC-CLI/releases/download/1.040/bvbrc-cli-1.040.deb

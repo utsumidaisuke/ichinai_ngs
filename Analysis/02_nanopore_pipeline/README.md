@@ -12,7 +12,7 @@ minionから出力されたfast5ファイルをもとにした解析パイプラ
 8. RAST-tkで遺伝子領域のアノテーション
 
 ## 解析するfast5ファイル
-dataファイルの保存
+dataディレクトリにfast5ファイルを保存
 
 ## 各種ツールの下準備と関連情報
 ### 仮想環境の構築
@@ -31,6 +31,10 @@ done
 
 ### guppyのインストール (GPUの設定が必要)   
 [サイト](https://community.nanoporetech.com/downloads): 環境にあったインストーラーをダウンロード 
+```
+wget -c https://cdn.oxfordnanoportal.com/software/analysis/ont_guppy_6.4.6-1~focal_amd64.deb
+sudo apt install ont_guppy_6.4.6-1~focal_amd64.deb
+```
 
 ### RAST-tkのインストール
 ```
