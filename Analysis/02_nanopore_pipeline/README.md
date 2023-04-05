@@ -38,6 +38,7 @@ pip install medaka
 ```
 
 ### NanoPlot、filtlong、flye、ont-fast5-api、seqkit、gslのインストール
+```
 mamba install -c bioconda nanoplot -y
 mamba install -c bioconda filtlong -y
 mamba install -c bioconda graphviz -y
@@ -45,7 +46,7 @@ mamba install -c bioconda flye -y
 mamba install -c bioconda ont-fast5-api -y
 mamba install -c bioconda seqkit -y
 mamba install -c conda-forge gsl=2.5 -y
-
+```
 ### Kleborateをよび必要なライブラリのインストール
 ```
 mamba install biopython -y
