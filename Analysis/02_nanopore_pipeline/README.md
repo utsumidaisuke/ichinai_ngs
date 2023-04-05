@@ -17,24 +17,23 @@ minionから出力されたfast5ファイルをもとにした解析パイプラ
 mamba create -n nano_pipe python=3.8 -y
 mamba activate nano_pipe
 ```
-
-### guppy (GPUの設定が必要)   
-[サイト](https://community.nanoporetech.com/downloads): 環境にあったインストーラーをダウンロード 
-
-### medaka
-medakaおよび必要なライブラリのインストール
+### 必要なライブラリのインストール
 ```
 sudo apt update
 for i in bzip2 g++ zlib1g-dev libbz2-dev liblzma-dev libffi-dev libncurses5-dev libcurl4-gnutls-dev libssl-dev curl make cmake wget python3-all-dev gdebi-core
 do
 sudo apt install $i
 done
-``` 
 ```
-mamba install -c bioconda minimap2=2.11 -y
-mamba install -c bioconda bcftools=1.11 -y
-mamba install -c bioconda samtools=1.11 -y
-pip install medaka
+
+### guppy (GPUの設定が必要)   
+[サイト](https://community.nanoporetech.com/downloads): 環境にあったインストーラーをダウンロード 
+
+### RAST-tkのインストール
+```
+curl -O -L https://github.com/BV-BRC/BV-BRC-CLI/releases/download/1.040/bvbrc-cli-1.040.deb
+sudo gdebi bvbrc-cli-1.040.deb -y
+rm bvbrc-cli-1.040.deb
 ```
 
 ### NanoPlot、filtlong、flye、ont-fast5-api、seqkit、gslのインストール
@@ -47,6 +46,7 @@ mamba install -c bioconda ont-fast5-api -y
 mamba install -c bioconda seqkit -y
 mamba install -c conda-forge gsl=2.5 -y
 ```
+
 ### Kleborateをよび必要なライブラリのインストール
 ```
 mamba install biopython -y
@@ -63,3 +63,10 @@ python3 setup.py install
 cd ../
 ```
 
+### medakaおよび必要なライブラリのインストール
+```
+mamba install -c bioconda minimap2=2.11 -y
+mamba install -c bioconda bcftools=1.11 -y
+mamba install -c bioconda samtools=1.11 -y
+pip install medaka
+```
