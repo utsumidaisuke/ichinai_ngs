@@ -26,7 +26,7 @@ sudo apt install $i
 done
 ```
 
-### guppy (GPUの設定が必要)   
+### guppyのインストール (GPUの設定が必要)   
 [サイト](https://community.nanoporetech.com/downloads): 環境にあったインストーラーをダウンロード 
 
 ### RAST-tkのインストール
@@ -47,7 +47,7 @@ mamba install -c bioconda seqkit -y
 mamba install -c conda-forge gsl=2.5 -y
 ```
 
-### Kleborateをよび必要なライブラリのインストール
+### Kleborateおよび必要なライブラリのインストール
 ```
 mamba install biopython -y
 mamba install blast -y
