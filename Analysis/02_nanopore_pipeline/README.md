@@ -22,7 +22,7 @@ mamba activate nano_pipe
 [サイト](https://community.nanoporetech.com/downloads): 環境にあったインストーラーをダウンロード 
 
 ### medaka
-medakaに必要なライブラリのインストール
+medakaおよび必要なライブラリのインストール
 ```
 sudo apt update
 for i in bzip2 g++ zlib1g-dev libbz2-dev liblzma-dev libffi-dev libncurses5-dev libcurl4-gnutls-dev libssl-dev curl make cmake wget python3-all-dev gdebi-core
@@ -30,7 +30,6 @@ do
 sudo apt install $i
 done
 ``` 
-medakaおよび依存関係ツールのインストール
 ```
 mamba install -c bioconda minimap2=2.11 -y
 mamba install -c bioconda bcftools=1.11 -y
@@ -47,11 +46,13 @@ mamba install -c bioconda ont-fast5-api -y
 mamba install -c bioconda seqkit -y
 mamba install -c conda-forge gsl=2.5 -y
 
-# Kleborateをよび必要なツールをインストール
+### Kleborateをよび必要なライブラリのインストール
+```
 mamba install biopython -y
 mamba install blast -y
 mamba install mash -y
-
+```
+```
 cd config
 git clone --recursive https://github.com/katholt/Kleborate.git
 cd Kleborate/kaptive
@@ -59,5 +60,5 @@ git pull https://github.com/katholt/Kaptive master
 cd ../
 python3 setup.py install
 cd ../
-
+```
 
