@@ -37,3 +37,27 @@ mamba install -c bioconda bcftools=1.11 -y
 mamba install -c bioconda samtools=1.11 -y
 pip install medaka
 ```
+
+### NanoPlot、filtlong、flye、ont-fast5-api、seqkit、gslのインストール
+mamba install -c bioconda nanoplot -y
+mamba install -c bioconda filtlong -y
+mamba install -c bioconda graphviz -y
+mamba install -c bioconda flye -y
+mamba install -c bioconda ont-fast5-api -y
+mamba install -c bioconda seqkit -y
+mamba install -c conda-forge gsl=2.5 -y
+
+# Kleborateをよび必要なツールをインストール
+mamba install biopython -y
+mamba install blast -y
+mamba install mash -y
+
+cd config
+git clone --recursive https://github.com/katholt/Kleborate.git
+cd Kleborate/kaptive
+git pull https://github.com/katholt/Kaptive master
+cd ../
+python3 setup.py install
+cd ../
+
+
