@@ -11,10 +11,10 @@ minionから出力されたfast5ファイルをもとにした解析パイプラ
 7. kleborateで菌種のアノテーション
 8. RAST-tkで遺伝子領域のアノテーション
 
-## 解析するfast5ファイル
+## <解析するfast5ファイル>
 dataディレクトリにfast5ファイルを保存
 
-## 各種ツールの下準備と関連情報
+## <各種ツールの下準備と関連情報>
 ### 仮想環境の構築
 ```
 mamba create -n nano_pipe python=3.8 -y
@@ -77,4 +77,49 @@ mamba install -c bioconda minimap2=2.11 -y
 mamba install -c bioconda bcftools=1.11 -y
 mamba install -c bioconda samtools=1.11 -y
 pip install medaka
+```
+
+## <解析の実行>
+### guppyでベースコールしfast5をfastqに変換
+```
+guppy_basecaller --flowcell FLO-MIN106 --kit SQK-RBK004 -x cuda:0 -i data -s output/guppy -r
+```
+
+### NanoPlotででクオリティーチェック
+```
+NanoPlot --summary output/guppy/sequencing_summary.txt --loglength -o output/nano_summary
+```
+### filtlongでトリミング
+```
+for i in $(ls output/guppy/pass/*.fastq | sed -e 's/\.fastq//g' | sed -e 's/output\/guppy\/pass\///g')
+do
+filtlong --min_length 1000 --keep_percent 90 output/guppy/pass/$i\.fastq | gzip -> output/filtered/$i\.filtered.fastq.gz
+done
+```
+### fastq.gzを統合し、idの重複を修正
+```
+cat output/filtered/*gz > output/filtered/combined.fastq.gz
+seqkit rename output/filtered/combined.fastq.gz > output/filtered/combined.renamed.fastq
+```
+
+### flyeでassembly
+```
+flye --nano-raw output/filtered/combined.renamed.fastq --out-dir output/flye_assembly --threads 50 --scaffold
+```
+
+### medakaでpolishing
+```
+medaka_consensus -i output/filtered/combined.renamed.fastq -d output/flye_assembly/assembly.fasta -o output/medaka -t 20
+```
+
+### Kleborateでアノテーション
+```
+kleborate -a output/medaka/consensus.fasta --all -o output/kleborate/kleborate_result.txt
+```
+
+# RAST-tkでアノテーション
+```
+rast-create-genome --scientific-name "Klebsiella pneumoniae" --genetic-code 11 --domain Bacteria --contigs output/medaka/consensus.fasta > output/RASTtk/K_pneumoniae.gto
+rast-process-genome -i output/RASTtk/K_pneumoniae.gto -o output/RASTtk/K_pneumoniae.gto2
+rast-export-genome genbank -i output/RASTtk/K_pneumoniae.gto2 -o output/RASTtk/K_pneumoniae.gbk
 ```
