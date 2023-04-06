@@ -1,7 +1,7 @@
 # nanopore_pipelineの内容
 minionから出力されたfast5ファイルをもとにした解析パイプラインの実行  
 
-## 解析のフロー
+## <解析のフロー>
 1. guppyでベースコールし、fast5からfastqファイルへの変換
 2. NanoPlotでクオリティーチェック
 3. filtlongでトリミング
@@ -34,6 +34,7 @@ done
 ```
 wget -c https://cdn.oxfordnanoportal.com/software/analysis/ont_guppy_6.4.6-1~focal_amd64.deb
 sudo apt install ont_guppy_6.4.6-1~focal_amd64.deb
+rm ont_guppy_6.4.6-1~focal_amd64.deb
 ```
 
 ### RAST-tkのインストール
@@ -56,9 +57,9 @@ mamba install -c conda-forge gsl=2.5 -y
 
 ### Kleborateおよび必要なライブラリのインストール
 ```
-mamba install biopython -y
-mamba install blast -y
-mamba install mash -y
+mamba install -c conda-forge biopython -y
+mamba install -c bioconda blast -y
+mamba install -c bioconda mash -y
 ```
 ```
 cd config
