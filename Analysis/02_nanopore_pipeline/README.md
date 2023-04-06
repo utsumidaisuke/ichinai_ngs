@@ -75,6 +75,13 @@ pip install medaka
 ```
 <br><br>
 ## 解析の実行
+### 保存ディレクトリの作成
+```
+for i in filtered flye_assembly guppy kleborate medaka nano_summary RASTtk
+do
+mkdir -p output/$i
+done
+```
 ### guppyでベースコールしfast5をfastqに変換
 ```
 guppy_basecaller --flowcell FLO-MIN106 --kit SQK-RBK004 -x cuda:0 -i data -s output/guppy -r
