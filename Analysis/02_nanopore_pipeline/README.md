@@ -1,7 +1,6 @@
 # nanopore_pipelineの内容
 minionから出力されたfast5ファイルをもとにした解析パイプラインの実行  
-<br>
-<br>  
+<br><br>  
 ## 解析のフロー
 1. guppyでベースコールし、fast5からfastqファイルへの変換
 2. NanoPlotでクオリティーチェック
@@ -11,12 +10,10 @@ minionから出力されたfast5ファイルをもとにした解析パイプラ
 6. medakaでpolishing
 7. kleborateで菌種のアノテーション
 8. RAST-tkで遺伝子領域のアノテーション
-<br>
-<br>  
+<br><br>  
 ## 解析するfast5ファイル
 dataディレクトリにfast5ファイルを保存
-<br>
-<br>  
+<br><br>  
 ## 各種ツールの下準備と関連情報
 ### 仮想環境の構築
 ```
