@@ -78,8 +78,7 @@ mamba install -c bioconda bcftools=1.11 -y
 mamba install -c bioconda samtools=1.11 -y
 pip install medaka
 ```
-<br>
-<br>  
+<br><br><br>  
 ## 解析の実行
 ### guppyでベースコールしfast5をfastqに変換
 ```
