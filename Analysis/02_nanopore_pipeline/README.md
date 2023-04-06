@@ -78,7 +78,7 @@ mamba install -c bioconda bcftools=1.11 -y
 mamba install -c bioconda samtools=1.11 -y
 pip install medaka
 ```
-<br><br><br>  
+<br><br>
 ## 解析の実行
 ### guppyでベースコールしfast5をfastqに変換
 ```
@@ -109,7 +109,6 @@ flye --nano-raw output/filtered/combined.renamed.fastq --out-dir output/flye_ass
 
 ### medakaでpolishing
 ```
-medaka_consensus -i output/filtered/combined.renamed.fastq -d output/flye_assembly/assembly.fasta -o output/medaka -t 20
 ```
 
 ### Kleborateでアノテーション
@@ -123,3 +122,4 @@ rast-create-genome --scientific-name "Klebsiella pneumoniae" --genetic-code 11 -
 rast-process-genome -i output/RASTtk/K_pneumoniae.gto -o output/RASTtk/K_pneumoniae.gto2
 rast-export-genome genbank -i output/RASTtk/K_pneumoniae.gto2 -o output/RASTtk/K_pneumoniae.gbk
 ```
+# nanopore_pipelineの内容
