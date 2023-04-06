@@ -1,7 +1,8 @@
 # nanopore_pipelineの内容
 minionから出力されたfast5ファイルをもとにした解析パイプラインの実行  
+  
 
-## <解析のフロー>
+## 解析のフロー
 1. guppyでベースコールし、fast5からfastqファイルへの変換
 2. NanoPlotでクオリティーチェック
 3. filtlongでトリミング
@@ -10,11 +11,13 @@ minionから出力されたfast5ファイルをもとにした解析パイプラ
 6. medakaでpolishing
 7. kleborateで菌種のアノテーション
 8. RAST-tkで遺伝子領域のアノテーション
+  
 
-## <解析するfast5ファイル>
+## 解析するfast5ファイル
 dataディレクトリにfast5ファイルを保存
+  
 
-## <各種ツールの下準備と関連情報>
+## 各種ツールの下準備と関連情報
 ### 仮想環境の構築
 ```
 mamba create -n nano_pipe python=3.8 -y
@@ -78,8 +81,9 @@ mamba install -c bioconda bcftools=1.11 -y
 mamba install -c bioconda samtools=1.11 -y
 pip install medaka
 ```
-
-## <解析の実行>
+  
+  
+## 解析の実行
 ### guppyでベースコールしfast5をfastqに変換
 ```
 guppy_basecaller --flowcell FLO-MIN106 --kit SQK-RBK004 -x cuda:0 -i data -s output/guppy -r
