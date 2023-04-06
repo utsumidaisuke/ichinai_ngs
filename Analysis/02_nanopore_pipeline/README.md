@@ -28,7 +28,6 @@ do
 sudo apt install $i
 done
 ```
-
 ### guppyのインストール (GPUの設定が必要)   
 [サイト](https://community.nanoporetech.com/downloads): 環境にあったインストーラーをダウンロード 
 ```
@@ -36,14 +35,12 @@ wget -c https://cdn.oxfordnanoportal.com/software/analysis/ont_guppy_6.4.6-1~foc
 sudo apt install ont_guppy_6.4.6-1~focal_amd64.deb
 rm ont_guppy_6.4.6-1~focal_amd64.deb
 ```
-
 ### RAST-tkのインストール
 ```
 curl -O -L https://github.com/BV-BRC/BV-BRC-CLI/releases/download/1.040/bvbrc-cli-1.040.deb
 sudo gdebi bvbrc-cli-1.040.deb -y
 rm bvbrc-cli-1.040.deb
 ```
-
 ### NanoPlot、filtlong、flye、ont-fast5-api、seqkit、gslのインストール
 ```
 mamba install -c bioconda nanoplot -y
@@ -54,7 +51,6 @@ mamba install -c bioconda ont-fast5-api -y
 mamba install -c bioconda seqkit -y
 mamba install -c conda-forge gsl=2.5 -y
 ```
-
 ### Kleborateおよび必要なライブラリのインストール
 ```
 mamba install -c conda-forge biopython -y
@@ -70,7 +66,6 @@ cd ../
 python3 setup.py install
 cd ../
 ```
-
 ### medakaおよび必要なライブラリのインストール
 ```
 mamba install -c bioconda minimap2=2.11 -y
@@ -84,7 +79,6 @@ pip install medaka
 ```
 guppy_basecaller --flowcell FLO-MIN106 --kit SQK-RBK004 -x cuda:0 -i data -s output/guppy -r
 ```
-
 ### NanoPlotででクオリティーチェック
 ```
 NanoPlot --summary output/guppy/sequencing_summary.txt --loglength -o output/nano_summary
@@ -101,25 +95,20 @@ done
 cat output/filtered/*gz > output/filtered/combined.fastq.gz
 seqkit rename output/filtered/combined.fastq.gz > output/filtered/combined.renamed.fastq
 ```
-
 ### flyeでassembly
 ```
 flye --nano-raw output/filtered/combined.renamed.fastq --out-dir output/flye_assembly --threads 50 --scaffold
 ```
-
 ### medakaでpolishing
 ```
 ```
-
 ### Kleborateでアノテーション
 ```
 kleborate -a output/medaka/consensus.fasta --all -o output/kleborate/kleborate_result.txt
 ```
-
 ### RAST-tkでアノテーション
 ```
 rast-create-genome --scientific-name "Klebsiella pneumoniae" --genetic-code 11 --domain Bacteria --contigs output/medaka/consensus.fasta > output/RASTtk/K_pneumoniae.gto
 rast-process-genome -i output/RASTtk/K_pneumoniae.gto -o output/RASTtk/K_pneumoniae.gto2
 rast-export-genome genbank -i output/RASTtk/K_pneumoniae.gto2 -o output/RASTtk/K_pneumoniae.gbk
 ```
-# nanopore_pipelineの内容
