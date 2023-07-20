@@ -14,16 +14,15 @@ CC30: [NZ_CP009361](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP009361)<br>
 CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 
 ## 解析のフロー
-1. guppyでベースコールし、fast5からfastqファイルへの変換
-2. NanoPlotでクオリティーチェック
-3. filtlongでトリミング
-4. fastqファイルの統合および、重複の修正
-5. flyeでassembly
-6. medakaでpolishing
-7. kleborateで菌種のアノテーション
-8. RAST-tkで遺伝子領域のアノテーション
-<br><br>  
-## 解析するfast5ファイル
+1. MRSAの各サンプルのfastqファイルの取得
+2. 各MRSAタイプのゲノムにbwaでマッピング
+3. bamファイルをsamtoolsのmpileupで統合
+4. 統合したmpileupファイルをvarascanでバリアントコールし、vcfファイルを作成
+5. vcf2phylip.pyでvcfファイルをphyファイルに変換
+6. phymlでphyファイルを読み込み、系統樹を作成
+7. FigTreeで系統樹を可視化
+
+## 1. fastqファイルの取得
 dataディレクトリにfast5ファイルを保存
 <br><br>  
 ## 各種ツールの下準備と関連情報
