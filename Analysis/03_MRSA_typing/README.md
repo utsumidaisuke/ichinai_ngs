@@ -30,6 +30,8 @@ mamba activate nano_pipe
 ```
 ### 必要なライブラリのインストール
 ```
+mamba install -c bioconda parallel-fastq-dump -y
+mamba install -c bioconda sra-tools -y
 mamba install -c bioconda bwa -y
 mamba install -c bioconda samtools -y
 mamba install -c bioconda varscan -y
@@ -42,12 +44,9 @@ git clone https://github.com/edgardomortiz/vcf2phylip.git
 ```
 
 ## 解析の実行
-### 保存ディレクトリの作成
+### fastqファイルの取得
 ```
-for i in filtered flye_assembly guppy kleborate medaka nano_summary RASTtk
-do
-mkdir -p output/$i
-done
+for i in $(cat data/download_list.txt) do; parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; don
 ```
 ### guppyでベースコールしfast5をfastqに変換
 ```
