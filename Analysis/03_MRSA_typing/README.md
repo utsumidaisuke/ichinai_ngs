@@ -1,5 +1,5 @@
 # MRSA_typingの内容
-MRSAのショートリードをマッピングし、vcfファイルから系統樹を作成
+MRSAのショートリードをマッピングし、vcfファイルから系統樹を作成<br>
 簡略化目的にCC30のサンプルのみ使用
 
 ## 文献
@@ -47,42 +47,10 @@ git clone https://github.com/edgardomortiz/vcf2phylip.git
 ## 解析の実行
 ### fastqファイルの取得
 ```
-for i in $(cat data/download_list.txt); do parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; done
+for i in $(cat data/samples.txt); do parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; done
 ```
-### guppyでベースコールしfast5をfastqに変換
+### indexファイルの作成
 ```
-guppy_basecaller --flowcell FLO-MIN106 --kit SQK-RBK004 -x cuda:0 -i data -s output/guppy -r
+for i in CC22 CC30 CC59 CC8; do bwa index data/fasta/$i/*fasta; done
 ```
-### NanoPlotででクオリティーチェック
-```
-NanoPlot --summary output/guppy/sequencing_summary.txt --loglength -o output/nano_summary
-```
-### filtlongでトリミング
-```
-for i in $(ls output/guppy/pass/*.fastq | sed -e 's/\.fastq//g' | sed -e 's/output\/guppy\/pass\///g')
-do
-filtlong --min_length 1000 --keep_percent 90 output/guppy/pass/$i\.fastq | gzip -> output/filtered/$i\.filtered.fastq.gz
-done
-```
-### fastq.gzを統合し、idの重複を修正
-```
-cat output/filtered/*gz > output/filtered/combined.fastq.gz
-seqkit rename output/filtered/combined.fastq.gz > output/filtered/combined.renamed.fastq
-```
-### flyeでassembly
-```
-flye --nano-raw output/filtered/combined.renamed.fastq --out-dir output/flye_assembly --threads 50 --scaffold
-```
-### medakaでpolishing
-```
-```
-### Kleborateでアノテーション
-```
-kleborate -a output/medaka/consensus.fasta --all -o output/kleborate/kleborate_result.txt
-```
-### RAST-tkでアノテーション
-```
-rast-create-genome --scientific-name "Klebsiella pneumoniae" --genetic-code 11 --domain Bacteria --contigs output/medaka/consensus.fasta > output/RASTtk/K_pneumoniae.gto
-rast-process-genome -i output/RASTtk/K_pneumoniae.gto -o output/RASTtk/K_pneumoniae.gto2
-rast-export-genome genbank -i output/RASTtk/K_pneumoniae.gto2 -o output/RASTtk/K_pneumoniae.gbk
-```
+
