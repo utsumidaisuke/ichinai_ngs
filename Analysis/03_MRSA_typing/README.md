@@ -22,69 +22,25 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 6. phymlでphyファイルを読み込み、系統樹を作成
 7. FigTreeで系統樹を可視化
 
-## 1. fastqファイルの取得
-dataディレクトリにfast5ファイルを保存
-<br><br>  
-## 各種ツールの下準備と関連情報
+## 各種ツールの準備
 ### 仮想環境の構築
 ```
-mamba create -n nano_pipe python=3.8 -y
+mamba create -n mrsa python=3.10 -y
 mamba activate nano_pipe
 ```
 ### 必要なライブラリのインストール
 ```
-sudo apt update
-for i in bzip2 g++ zlib1g-dev libbz2-dev liblzma-dev libffi-dev libncurses5-dev libcurl4-gnutls-dev libssl-dev curl make cmake wget python3-all-dev gdebi-core
-do
-sudo apt install $i
-done
+mamba install -c bioconda bwa
+mamba install -c bioconda samtools
+mamba install -c bioconda varscan
+mamba install -c bioconda phyml
 ```
-### guppyのインストール (GPUの設定が必要)   
-[サイト](https://community.nanoporetech.com/downloads): 環境にあったインストーラーをダウンロード 
+### vcf2phylip.pyのインストール
+[vcf2phylip](https://github.com/edgardomortiz/vcf2phylip): 環境にあったインストーラーをダウンロード 
 ```
-wget -c https://cdn.oxfordnanoportal.com/software/analysis/ont_guppy_6.4.6-1~focal_amd64.deb
-sudo apt install ont_guppy_6.4.6-1~focal_amd64.deb
-rm ont_guppy_6.4.6-1~focal_amd64.deb
+git clone https://github.com/edgardomortiz/vcf2phylip.git
 ```
-### RAST-tkのインストール
-```
-curl -O -L https://github.com/BV-BRC/BV-BRC-CLI/releases/download/1.040/bvbrc-cli-1.040.deb
-sudo gdebi bvbrc-cli-1.040.deb -y
-rm bvbrc-cli-1.040.deb
-```
-### NanoPlot、filtlong、flye、ont-fast5-api、seqkit、gslのインストール
-```
-mamba install -c bioconda nanoplot -y
-mamba install -c bioconda filtlong -y
-mamba install -c bioconda graphviz -y
-mamba install -c bioconda flye -y
-mamba install -c bioconda ont-fast5-api -y
-mamba install -c bioconda seqkit -y
-mamba install -c conda-forge gsl=2.5 -y
-```
-### Kleborateおよび必要なライブラリのインストール
-```
-mamba install -c conda-forge biopython -y
-mamba install -c bioconda blast -y
-mamba install -c bioconda mash -y
-```
-```
-cd config
-git clone --recursive https://github.com/katholt/Kleborate.git
-cd Kleborate/kaptive
-git pull https://github.com/katholt/Kaptive master
-cd ../
-python3 setup.py install
-cd ../
-```
-### medakaおよび必要なライブラリのインストール
-```
-mamba install -c bioconda minimap2=2.11 -y
-mamba install -c bioconda bcftools=1.11 -y
-mamba install -c bioconda samtools=1.11 -y
-pip install medaka
-```
-<br><br>
+
 ## 解析の実行
 ### 保存ディレクトリの作成
 ```
