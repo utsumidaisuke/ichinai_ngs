@@ -1,5 +1,6 @@
 # MRSA_typingの内容
 MRSAのショートリードをマッピングし、vcfファイルから系統樹を作成
+簡略化目的にCC30のサンプルのみ使用
 
 ## 文献
 [Changes in the Genotypic Characteristics of Community-Acquired Methicillin-Resistant Staphylococcus aureus Collected in 244 Medical Facilities in Japan between 2010 and 2018: a Nationwide Surveillance](https://journals.asm.org/doi/epub/10.1128/spectrum.02272-21)
@@ -46,7 +47,7 @@ git clone https://github.com/edgardomortiz/vcf2phylip.git
 ## 解析の実行
 ### fastqファイルの取得
 ```
-for i in $(cat data/download_list.txt) do; parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; don
+for i in $(cat data/download_list.txt); do parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; done
 ```
 ### guppyでベースコールしfast5をfastqに変換
 ```
