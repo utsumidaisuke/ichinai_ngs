@@ -7,6 +7,12 @@ MRSAのショートリードをマッピングし、vcfファイルから系統�
 ## ダウンロードデータ
 [PRJDB11170](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP008386&o=acc_s%3Aa)
 
+## 参照ゲノム
+CC8: [NC_007793](https://www.ncbi.nlm.nih.gov/nuccore/NC_007793)<br>
+CC22: [NZ_CP007659](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP007659)<br>
+CC30: [NZ_CP009361](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP009361)<br>
+CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
+
 ## 解析のフロー
 1. guppyでベースコールし、fast5からfastqファイルへの変換
 2. NanoPlotでクオリティーチェック
