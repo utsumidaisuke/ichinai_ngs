@@ -54,3 +54,7 @@ for i in $(cat data/samples.txt); do parallel-fastq-dump --threads 8 --split-fil
 for i in CC22 CC30 CC59 CC8; do bwa index data/fasta/$i/*fasta; done
 ```
 
+### bwaでマッピング
+```
+```
+
