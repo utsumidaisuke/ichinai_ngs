@@ -3,7 +3,10 @@ MRSAのショートリードをマッピングし、vcfファイルから系統�
 
 ## 文献
 [Changes in the Genotypic Characteristics of Community-Acquired Methicillin-Resistant Staphylococcus aureus Collected in 244 Medical Facilities in Japan between 2010 and 2018: a Nationwide Surveillance](https://journals.asm.org/doi/epub/10.1128/spectrum.02272-21)
-<br><br>  
+
+## ダウンロードデータ
+[PRJDB11170](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP008386&o=acc_s%3Aa)
+
 ## 解析のフロー
 1. guppyでベースコールし、fast5からfastqファイルへの変換
 2. NanoPlotでクオリティーチェック
