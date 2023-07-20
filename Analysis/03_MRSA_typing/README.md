@@ -30,13 +30,13 @@ mamba activate nano_pipe
 ```
 ### 必要なライブラリのインストール
 ```
-mamba install -c bioconda bwa
-mamba install -c bioconda samtools
-mamba install -c bioconda varscan
-mamba install -c bioconda phyml
+mamba install -c bioconda bwa -y
+mamba install -c bioconda samtools -y
+mamba install -c bioconda varscan -y
+mamba install -c bioconda phyml -y
 ```
 ### vcf2phylip.pyのインストール
-[vcf2phylip](https://github.com/edgardomortiz/vcf2phylip): 環境にあったインストーラーをダウンロード 
+[vcf2phylip](https://github.com/edgardomortiz/vcf2phylip): vcf2phylip.pyの実行ファイルの取得
 ```
 git clone https://github.com/edgardomortiz/vcf2phylip.git
 ```
