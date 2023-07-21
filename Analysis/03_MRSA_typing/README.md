@@ -80,3 +80,7 @@ varscan mpileup2cns mpileup/CC30.mpileup --output-vcf 1 --min-var-freq 0.9 --min
 ```
 vcf2phylip.py -i varscan/CC30.vcf --output-folder phyml
 ```
+### phylipファイルのサンプル名の書き換え
+```
+python phy_conv.py phyml/CC30.min4.phy_phyml_tree.txt
+```

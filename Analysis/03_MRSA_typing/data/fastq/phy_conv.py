@@ -2,8 +2,8 @@ import sys
 
 arg = sys.argv
 
-with open('list.txt') as f:
-    a = [i.strip() for i in f.readlines()]
+with open('supple_file2.txt') as f:
+    a = [i.split('\t')[1].strip() for i in f.readlines()]
 
 with open(arg[1]) as f:
     t = f.readline()
@@ -11,7 +11,7 @@ with open(arg[1]) as f:
 for i,j in zip(range(len(a)), a):
     t = t.replace(f'Sample{str(i+1)}:',f'{j}:')
 
-filename = arg[1].replace('_tree.txt','_tree_conv.txt')
+filename = 'converted_phy.txt'
 
 with open(filename, 'w') as f:
     f.write(t)
