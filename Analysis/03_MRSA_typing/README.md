@@ -46,6 +46,7 @@ sudo cp vcf2phylip/vcf2phylip.py /usr/local/bin
 ```
 ## 解析の実行
 ### fastqファイルの取得(CC30のサンプルのみ)
+ときにファイルダウンロードに失敗することあり、確認必要
 ```
 for i in $(cat data/fastq/samples.txt); do parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; done
 ```
