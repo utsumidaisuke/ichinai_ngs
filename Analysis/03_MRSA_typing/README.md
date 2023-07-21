@@ -42,19 +42,41 @@ mamba install -c bioconda phyml -y
 [vcf2phylip](https://github.com/edgardomortiz/vcf2phylip): vcf2phylip.pyの実行ファイルの取得
 ```
 git clone https://github.com/edgardomortiz/vcf2phylip.git
+sudo cp vcf2phylip/vcf2phylip.py /usr/local/bin
 ```
-
 ## 解析の実行
-### fastqファイルの取得
+### fastqファイルの取得(CC30のサンプルのみ)
 ```
-for i in $(cat data/samples.txt); do parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; done
+for i in $(cat data/fastq/samples.txt); do parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; done
 ```
 ### indexファイルの作成
 ```
-for i in CC22 CC30 CC59 CC8; do bwa index data/fasta/$i/*fasta; done
+bwa index -p data/fasta/CC30/NZ_CP009361_1 data/fasta/CC30/NZ_CP009361_1.fasta
 ```
 
+### ファイル名の変更およびディレクトリの作成
+```
+cd data/fastq
+awk '{print  $1 "_1.fastq.gz " $2 "_1.fastq.gz"}' supple_file2.txt | xargs -n 2 mv
+awk '{print  $1 "_2.fastq.gz " $2 "_2.fastq.gz"}' supple_file2.txt | xargs -n 2 mv
+for i in $(awk '{print $2}' supple_file2.txt); do mkdir $i; done
+for i in $(awk '{print $2}' supple_file2.txt); do mv $i*.fastq.gz $i; done
+```
 ### bwaでマッピング
 ```
+for i in $(awk '{print $2}' supple_file2.txt); do bwa bwasw ../fasta/CC30/NZ_CP009361_1 -t 40 $i/$i\_1.fastq.gz $i/$i\_2.fastq.gz | samtools view -@16 -bS | samtools sort -@16 -T temp -o $i/$i\.bam; done
 ```
-
+### bamファイルをmpileupファイルとして統合
+```
+mkdir mpileup
+samtools mpileup -B -q 1 -f ../fasta/CC30/NZ_CP009361_1.fasta $(ls */*.bam) > mpileup/CC30.mpileup
+```
+### varscanでバリアントコール
+```
+mkdir varscan
+varscan mpileup2cns mpileup/CC30.mpileup --output-vcf 1 --min-var-freq 0.9 --min-coverage 30 --min-reads2 20 --min-avg-qual 25 > varscan/CC30.vcf
+```
+### vcfファイルをvcf2phylip.pyでphylipファイルに変換
+```
+vcf2phylip.py -i varscan/CC30.vcf --output-folder phyml
+```
