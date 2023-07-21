@@ -22,6 +22,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 5. vcf2phylip.pyでvcfファイルをphyファイルに変換
 6. phymlでphyファイルを読み込み、系統樹を作成
 7. FigTreeで系統樹を可視化
+!['フロー'](flow.jpeg)
 
 ## 各種ツールの準備
 ### 仮想環境の構築
