@@ -27,7 +27,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 ### 仮想環境の構築
 ```
 mamba create -n mrsa python=3.10 -y
-mamba activate nano_pipe
+mamba activate mrsa
 ```
 ### 必要なライブラリのインストール
 ```
