@@ -8,7 +8,7 @@ MRSAのショートリードをマッピングし、vcfファイルから系統�
 ## ダウンロードデータ
 [PRJDB11170](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP008386&o=acc_s%3Aa)
 
-## 参照ゲノム
+## 参照ゲノム(data/fastaに保存)
 CC8: [NC_007793](https://www.ncbi.nlm.nih.gov/nuccore/NC_007793)<br>
 CC22: [NZ_CP007659](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP007659)<br>
 CC30: [NZ_CP009361](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP009361)<br>
@@ -49,12 +49,12 @@ sudo cp vcf2phylip/vcf2phylip.py /usr/local/bin
 ```
 for i in $(cat data/fastq/samples.txt); do parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; done
 ```
-### indexファイルの作成
+### MRASゲノムのindexファイルの作成
 ```
 bwa index -p data/fasta/CC30/NZ_CP009361_1 data/fasta/CC30/NZ_CP009361_1.fasta
 ```
 
-### ファイル名の変更およびディレクトリの作成
+### 各サンプルのファイル名の変更およびディレクトリの作成
 ```
 cd data/fastq
 awk '{print  $1 "_1.fastq.gz " $2 "_1.fastq.gz"}' supple_file2.txt | xargs -n 2 mv
