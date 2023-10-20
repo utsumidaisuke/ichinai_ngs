@@ -32,7 +32,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 1. fastqcでfastqファイルのクオリティーチェック<br>
 2. trim-galoreでアダプタートリミング<br>
 3. snippyで参照配列にリードをアライメント<br>
-
+<br>
 ===2nd phase===<br>
 4. snippy-coreでコアゲノムを検出<br>
 5. seqkitでアライメントデータから参照配列を除外<br>
@@ -44,7 +44,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 
 
 ## 各種ツールの準備
-### 必要なライブラリのインストール
+#### 必要なライブラリのインストール
 ```
 sudo apt-get install libtabixpp-dev
 ```
@@ -54,7 +54,7 @@ sudo apt-get install libtabixpp-dev
 mamba create -n nishiyama python=3.9 -y
 mamba activate nishiyama
 ```
-### 必要なライブラリのインストール
+#### 必要なライブラリのインストール
 ```
 mamba install -c bioconda parallel-fastq-dump -y
 mamba install -c bioconda fastqc -y
