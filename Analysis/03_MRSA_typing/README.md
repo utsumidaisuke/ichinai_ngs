@@ -24,13 +24,10 @@ CC30: [NZ_CP009361](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP009361)<br>
 CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 
 ## 解析のフロー
-1. MRSAの各サンプルのfastqファイルの取得
-2. 各MRSAタイプのゲノムにbwaでマッピング
-3. bamファイルをsamtoolsのmpileupで統合
-4. 統合したmpileupファイルをvarascanでバリアントコールし、vcfファイルを作成
-5. vcf2phylip.pyでvcfファイルをphyファイルに変換
-6. phymlでphyファイルを読み込み、系統樹を作成
-7. FigTreeで系統樹を可視化
+1. fastqcでfastqファイルのクオリティーチェック
+2. trim-galoreでアダプタートリミング
+3. snippyで参照配列にリードをアライメント
+4. snippy-coreでコアゲノムを検出
   
 !['フロー'](flow.jpeg)
 
