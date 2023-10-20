@@ -28,30 +28,41 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 2. trim-galoreでアダプタートリミング
 3. snippyで参照配列にリードをアライメント
 4. snippy-coreでコアゲノムを検出
+5. seqkitでアライメントデータから参照配列を除外
+6. snippy-clean_full_alnでアライメントデータのクリーニング
+7. run_gubbins.pyで組み換え領域を除外
+8. snp-sitesでSNPサイトを検出
+9. FastTreeで系統樹の作成
+10. ヒートマップの作成
   
 !['フロー'](flow.jpeg)
 
 ## 各種ツールの準備
+### 必要なライブラリのインストール
+```
+sudo apt-get install libtabixpp-dev
+```
+
 ### 仮想環境の構築
 ```
-mamba create -n mrsa python=3.10 -y
-mamba activate mrsa
+mamba create -n nishiyama python=3.9 -y
+mamba activate nishiyama
 ```
 ### 必要なライブラリのインストール
 ```
 mamba install -c bioconda parallel-fastq-dump -y
-mamba install -c bioconda sra-tools -y
-mamba install -c bioconda bwa -y
-mamba install -c bioconda samtools -y
-mamba install -c bioconda varscan -y
-mamba install -c bioconda phyml -y
+mamba install -c bioconda fastqc -y
+mamba install -c bioconda trim-galore -y
+mamba install -c bioconda snippy -y
+mamba install -c bioconda gubbins -y
+mamba install -c bioconda seqkit -y
 ```
-### vcf2phylip.pyのインストール
-[vcf2phylip](https://github.com/edgardomortiz/vcf2phylip): vcf2phylip.pyの実行ファイルの取得
+## サンプルデータの準備
+### parallel-fastqp-dumpでfastqファイルをダウンロード
 ```
-git clone https://github.com/edgardomortiz/vcf2phylip.git
-sudo cp vcf2phylip/vcf2phylip.py /usr/local/bin
+bash prep_fastq.sh
 ```
+
 ## 解析の実行
 ### fastqファイルの取得(CC30のサンプルのみ)
 ときにファイルダウンロードに失敗することあり、確認必要
