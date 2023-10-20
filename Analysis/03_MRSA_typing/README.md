@@ -1,9 +1,18 @@
 # MRSA_typingの内容
-MRSAのショートリードをマッピングし、vcfファイルから系統樹を作成<br>
-簡略化目的にCC30のサンプルのみ使用
+MRSAのショートリードを参照配列にマッピング<br>
+snippyで複数サンプルのアライメント<br>
+gubbinsで組み換え配列の削除<br>
+snp情報から系統樹を作成<br>
 
-## 文献
+
+## 参考文献
+下記の論文の解析結果の再現を試みる<br>
+組み換え配列の除外にClonalFrameMLを使っているが、本解析では代替としてgubbinsを使用<br>
 [Changes in the Genotypic Characteristics of Community-Acquired Methicillin-Resistant Staphylococcus aureus Collected in 244 Medical Facilities in Japan between 2010 and 2018: a Nationwide Surveillance](https://journals.asm.org/doi/epub/10.1128/spectrum.02272-21)
+
+実際の解析フローは下記の論文に添付されているsnakemakeのフローに準じる
+[Whole Genome Sequencing Analysis of Porcine Faecal Commensal Escherichia coli Carrying Class 1 Integrons from Sows and Their Offspring](https://www.mdpi.com/2076-2607/8/6/843)<br>
+[GitHubサイト](https://github.com/CJREID/snplord)
 
 ## ダウンロードデータ
 [PRJDB11170](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP008386&o=acc_s%3Aa)
