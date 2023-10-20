@@ -10,7 +10,7 @@ snp情報から系統樹を作成<br>
 組み換え配列の除外にClonalFrameMLを使っているが、本解析では代替としてgubbinsを使用<br>
 [Changes in the Genotypic Characteristics of Community-Acquired Methicillin-Resistant Staphylococcus aureus Collected in 244 Medical Facilities in Japan between 2010 and 2018: a Nationwide Surveillance](https://journals.asm.org/doi/epub/10.1128/spectrum.02272-21)
 
-実際の解析フローは下記の論文に添付されているsnakemakeのフローに準じる
+実際の解析フローは下記の論文に添付されているsnakemakeのフローに準じる<br>
 [Whole Genome Sequencing Analysis of Porcine Faecal Commensal Escherichia coli Carrying Class 1 Integrons from Sows and Their Offspring](https://www.mdpi.com/2076-2607/8/6/843)<br>
 [GitHubサイト](https://github.com/CJREID/snplord)
 
