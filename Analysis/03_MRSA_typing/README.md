@@ -72,18 +72,20 @@ bash prep_fastq.sh
 
 ## 解析の実行
 ### 1st phase
-#### 解析結果保存用のディレクトリを作成
 ```
+bash phase_1.sh CAM-1790
+```
+
+#### phase_1.shの内容
+```
+# 解析結果保存用のディレクトリを作成
 mkdir -p results/CAM-1790/fastq results/CAM-1790/qc
-```
-#### fastqcでfastqファイルのクオリティーチェック
-```
+# fastqcでfastqファイルのクオリティーチェック
 fastqc data/CAM-1790_1.fastq.gz data/CAM-1790_2.fastq.gz -o results/CAM-1790/qc
-```
-#### trim-galoreでアダプタートリミング
-```
+# trim-galoreでアダプタートリミング
 trim_galore --gzip --paired data/CAM-1790_1.fastq.gz data/CAM-1790_2.fastq.gz -o results/CAM-1790/fastq
 ```
+
 #### snippyで参照配列にリードをアライメント
 ```
 snippy --cpus 10 --force --outdir results/CAM-1790/CAM-1790 --ref gbk/CP003166.gb --R1 results/CAM-1790/fastq/CAM-1790_1_val_1.fq.gz --R2 results/CAM-1790/fastq/CAM-1790_2_val_2.fq.gz
