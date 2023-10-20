@@ -49,8 +49,8 @@ sudo apt-get install libtabixpp-dev
 
 #### 仮想環境の構築
 ```
-mamba create -n nishiyama python=3.9 -y
-mamba activate nishiyama
+mamba create -n mrsa python=3.9 -y
+mamba activate mrsa
 ```
 #### 必要なライブラリのインストール
 ```
