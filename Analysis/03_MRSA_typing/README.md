@@ -31,7 +31,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 ===1st phase===
 1. fastqcでfastqファイルのクオリティーチェック
 2. trim-galoreでアダプタートリミング
-3. snippyで参照配列にリードをアライメント
+3. snippyで参照配列にリードをアライメント<br>
 ===2nd phase===
 4. snippy-coreでコアゲノムを検出
 5. seqkitでアライメントデータから参照配列を除外
