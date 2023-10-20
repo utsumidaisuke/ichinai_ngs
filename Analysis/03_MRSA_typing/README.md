@@ -24,9 +24,14 @@ CC30: [NZ_CP009361](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP009361)<br>
 CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 
 ## 解析のフロー
+解析のフェーズは２つに分かれる<br>
+1st phase: 各サンプルの前処理と参照配列へのアライメント<br>
+2nd phase: 各サンプルのアライメント情報を統合し処理<br>
+===1st phase===
 1. fastqcでfastqファイルのクオリティーチェック
 2. trim-galoreでアダプタートリミング
 3. snippyで参照配列にリードをアライメント
+===1st phase===
 4. snippy-coreでコアゲノムを検出
 5. seqkitでアライメントデータから参照配列を除外
 6. snippy-clean_full_alnでアライメントデータのクリーニング
@@ -58,53 +63,29 @@ mamba install -c bioconda gubbins -y
 mamba install -c bioconda seqkit -y
 ```
 ## サンプルデータの準備
-### parallel-fastqp-dumpでfastqファイルをダウンロード
+### parallel-fastq-dumpでfastqファイルをダウンロード
 ```
 bash prep_fastq.sh
 ```
 
 ## 解析の実行
-### fastqファイルの取得(CC30のサンプルのみ)
-ときにファイルダウンロードに失敗することあり、確認必要
+### 解析結果保存用のディレクトリを作成
 ```
-for i in $(cat data/fastq/samples.txt); do parallel-fastq-dump --threads 8 --split-files --gzip --outdir data/fastq --sra-id $i; done
+mkdir -p results/CAM-1790/fastq results/CAM-1790/qc
 ```
-### MRASゲノムのindexファイルの作成
+### fastqcでfastqファイルのクオリティーチェック
 ```
-bwa index -p data/fasta/CC30/NZ_CP009361_1 data/fasta/CC30/NZ_CP009361_1.fasta
+fastqc data/CAM-1790_1.fastq.gz data/CAM-1790_2.fastq.gz -o results/CAM-1790/qc
+```
+### trim-galoreでアダプタートリミング
+```
+trim_galore --gzip --paired data/CAM-1790_1.fastq.gz data/CAM-1790_2.fastq.gz -o results/CAM-1790/fastq
+```
+### snippyで参照配列にリードをアライメント
+```
+snippy --cpus 10 --force --outdir results/CAM-1790/CAM-1790 --ref gbk/CP003166.gb --R1 results/CAM-1790/fastq/CAM-1790_1_val_1.fq.gz --R2 results/CAM-1790/fastq/CAM-1790_2_val_2.fq.gz
 ```
 
-### 各サンプルのファイル名の変更およびディレクトリの作成
-```
-cd data/fastq
-awk '{print  $1 "_1.fastq.gz " $2 "_1.fastq.gz"}' supple_file2.txt | xargs -n 2 mv
-awk '{print  $1 "_2.fastq.gz " $2 "_2.fastq.gz"}' supple_file2.txt | xargs -n 2 mv
-for i in $(awk '{print $2}' supple_file2.txt); do mkdir $i; done
-for i in $(awk '{print $2}' supple_file2.txt); do mv $i*.fastq.gz $i; done
-```
-### bwaでマッピング
-```
-for i in $(awk '{print $2}' supple_file2.txt); do bwa bwasw ../fasta/CC30/NZ_CP009361_1 -t 40 $i/$i\_1.fastq.gz $i/$i\_2.fastq.gz | samtools view -@16 -bS | samtools sort -@16 -T temp -o $i/$i\.bam; done
-```
-### bamファイルをmpileupファイルとして統合
-```
-mkdir mpileup
-samtools mpileup -B -q 1 -f ../fasta/CC30/NZ_CP009361_1.fasta $(ls */*.bam) > mpileup/CC30.mpileup
-```
-### varscanでバリアントコール
-```
-mkdir varscan
-varscan mpileup2cns mpileup/CC30.mpileup --output-vcf 1 --min-var-freq 0.9 --min-coverage 30 --min-reads2 20 --min-avg-qual 25 > varscan/CC30.vcf
-```
-### vcfファイルをvcf2phylip.pyでphylipファイルに変換
-```
-vcf2phylip.py -i varscan/CC30.vcf --output-folder phyml
-```
-### phymlで系統樹を作成
-```
-phyml -i phyml/CC30.min4.phy -d nt -b 100 -m GTR
-```
-### phylipファイルのサンプル名の書き換え
-```
-python phy_conv.py phyml/CC30.min4.phy_phyml_tree.txt
-```
+
+###
+
