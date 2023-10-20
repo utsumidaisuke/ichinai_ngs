@@ -47,7 +47,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 sudo apt-get install libtabixpp-dev
 ```
 
-### 仮想環境の構築
+#### 仮想環境の構築
 ```
 mamba create -n nishiyama python=3.9 -y
 mamba activate nishiyama
