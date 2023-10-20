@@ -80,23 +80,23 @@ bash phase_1.sh CAM-1790
 ```
 for i in CAM-1790 CAM-1791 CAM-1961 CAM-1964 CAM-2026 CAM-2066 CAM-2096
 do
-bash phase_1.sh 4i
+bash phase_1.sh $i
 done
 ```
 
 #### phase_1.shの内容
 ```
 # 解析結果保存用のディレクトリを作成
-mkdir -p results/CAM-1790/fastq results/CAM-1790/qc
+mkdir -p results/$1/fastq results/$1/qc
 
 # fastqcでfastqファイルのクオリティーチェック
-fastqc data/CAM-1790_1.fastq.gz data/CAM-1790_2.fastq.gz -o results/CAM-1790/qc
+fastqc data/$1_1.fastq.gz data/$1_2.fastq.gz -o results/$1/qc
 
 # trim-galoreでアダプタートリミング
-trim_galore --gzip --paired data/CAM-1790_1.fastq.gz data/CAM-1790_2.fastq.gz -o results/CAM-1790/fastq
+trim_galore --gzip --paired data/$1_1.fastq.gz data/$1_2.fastq.gz -o results/$1/fastq
 
 # snippyで参照配列にリードをアライメント
-snippy --cpus 10 --force --outdir results/CAM-1790/CAM-1790 --ref gbk/CP003166.gb --R1 results/CAM-1790/fastq/CAM-1790_1_val_1.fq.gz --R2 results/CAM-1790/fastq/CAM-1790_2_val_2.fq.gz
+snippy --cpus 10 --force --outdir results/$1/$1 --ref gbk/CP003166.gb --R1 results/$1/fastq/$1_1_val_1.fq.gz --R2 results/$1/fastq/$1_2_val_2.fq.gz
 ```
 
 ### 2nd phase
