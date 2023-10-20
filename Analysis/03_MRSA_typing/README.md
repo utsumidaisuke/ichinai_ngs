@@ -28,12 +28,12 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 **1st phase**: 各サンプルの前処理と参照配列へのアライメント<br>
 **2nd phase**: 各サンプルのアライメント情報を統合し処理<br>
 <br>
-===1st phase===
+===1st phase===<br>
 1. fastqcでfastqファイルのクオリティーチェック
 2. trim-galoreでアダプタートリミング
 3. snippyで参照配列にリードをアライメント<br>
 
-===2nd phase===
+===2nd phase===<br>
 4. snippy-coreでコアゲノムを検出
 5. seqkitでアライメントデータから参照配列を除外
 6. snippy-clean_full_alnでアライメントデータのクリーニング
