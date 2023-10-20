@@ -25,13 +25,14 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 
 ## 解析のフロー
 解析のフェーズは２つに分かれる<br>
-1st phase: 各サンプルの前処理と参照配列へのアライメント<br>
-2nd phase: 各サンプルのアライメント情報を統合し処理<br>
+**1st phase**: 各サンプルの前処理と参照配列へのアライメント<br>
+**2nd phase**: 各サンプルのアライメント情報を統合し処理<br>
+<br>
 ===1st phase===
 1. fastqcでfastqファイルのクオリティーチェック
 2. trim-galoreでアダプタートリミング
 3. snippyで参照配列にリードをアライメント
-===1st phase===
+===2nd phase===
 4. snippy-coreでコアゲノムを検出
 5. seqkitでアライメントデータから参照配列を除外
 6. snippy-clean_full_alnでアライメントデータのクリーニング
@@ -39,8 +40,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 8. snp-sitesでSNPサイトを検出
 9. FastTreeで系統樹の作成
 10. ヒートマップの作成
-  
-!['フロー'](flow.jpeg)
+
 
 ## 各種ツールの準備
 ### 必要なライブラリのインストール
