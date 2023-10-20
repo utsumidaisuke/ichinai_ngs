@@ -27,18 +27,18 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 解析のフェーズは２つに分かれる<br>
 **1st phase**: 各サンプルの前処理と参照配列へのアライメント<br>
 **2nd phase**: 各サンプルのアライメント情報を統合し処理<br>
-#### 1st phase
-- fastqcでfastqファイルのクオリティーチェック<br>
-- trim-galoreでアダプタートリミング<br>
-- snippyで参照配列にリードをアライメント<br>
-#### 2nd phase
-- snippy-coreでコアゲノムを検出<br>
-- seqkitでアライメントデータから参照配列を除外<br>
-- snippy-clean_full_alnでアライメントデータのクリーニング<br>
-- run_gubbins.pyで組み換え領域を除外<br>
-- snp-sitesでSNPサイトを検出<br>
-- FastTreeで系統樹の作成<br>
-- ヒートマップの作成<br>
+### 1st phase
+1. fastqcでfastqファイルのクオリティーチェック<br>
+2. trim-galoreでアダプタートリミング<br>
+3. snippyで参照配列にリードをアライメント<br>
+### 2nd phase
+4. snippy-coreでコアゲノムを検出<br>
+5. seqkitでアライメントデータから参照配列を除外<br>
+6. snippy-clean_full_alnでアライメントデータのクリーニング<br>
+7. run_gubbins.pyで組み換え領域を除外<br>
+8. snp-sitesでSNPサイトを検出<br>
+9. FastTreeで系統樹の作成<br>
+10. ヒートマップの作成<br>
 
 
 ## 各種ツールの準備
