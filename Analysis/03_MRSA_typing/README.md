@@ -65,7 +65,7 @@ mamba install -c anaconda seaborn -y
 mamba install -c anaconda numpy -y
 ```
 ## サンプルデータの準備
-### parallel-fastq-dumpでfastqファイルをダウンロード
+#### parallel-fastq-dumpでfastqファイルをダウンロード
 ```
 bash prep_fastq.sh
 ```
@@ -76,6 +76,14 @@ bash prep_fastq.sh
 ```
 bash phase_1.sh CAM-1790
 ```
+すべてのサンプルに対してphase_1.shを実施
+```
+for i in CAM-1790 CAM-1791 CAM-1961 CAM-1964 CAM-2026 CAM-2066 CAM-2096
+do
+bash phase_1.sh 4i
+done
+```
+
 #### phase_1.shの内容
 ```
 # 解析結果保存用のディレクトリを作成
