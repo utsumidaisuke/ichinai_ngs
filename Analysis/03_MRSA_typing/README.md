@@ -72,50 +72,50 @@ bash prep_fastq.sh
 
 ## 解析の実行
 ### 1st phase
+各サンプルのQC、トリミング、アライメント
 ```
 bash phase_1.sh CAM-1790
 ```
-
 #### phase_1.shの内容
 ```
 # 解析結果保存用のディレクトリを作成
 mkdir -p results/CAM-1790/fastq results/CAM-1790/qc
+
 # fastqcでfastqファイルのクオリティーチェック
 fastqc data/CAM-1790_1.fastq.gz data/CAM-1790_2.fastq.gz -o results/CAM-1790/qc
+
 # trim-galoreでアダプタートリミング
 trim_galore --gzip --paired data/CAM-1790_1.fastq.gz data/CAM-1790_2.fastq.gz -o results/CAM-1790/fastq
-```
 
-#### snippyで参照配列にリードをアライメント
-```
+# snippyで参照配列にリードをアライメント
 snippy --cpus 10 --force --outdir results/CAM-1790/CAM-1790 --ref gbk/CP003166.gb --R1 results/CAM-1790/fastq/CAM-1790_1_val_1.fq.gz --R2 results/CAM-1790/fastq/CAM-1790_2_val_2.fq.gz
 ```
+
 ### 2nd phase
-#### snippy-coreでコアゲノムを検出
+各サンプルのアライメントデータを統合して解析
 ```
+bash phase_2.sh
+```
+#### phase_2.shの内容
+```
+# snippy-coreでコアゲノムを検出
 snippy-core  --ref gbk/CP003166.gb --prefix results/snippy-core/core $(for i in 1790 1791 1961 1964 2026 2066 2096; do echo results/CAM-$i/CAM-$i; done)
-```
-#### seqkitでアライメントデータから参照配列を除外
-```
+
+# seqkitでアライメントデータから参照配列を除外
 seqkit grep -i -v -p Reference results/snippy-core/core.full.aln > results/snippy-core/core.full.noref.aln
-```
-#### snippy-clean_full_alnでアライメントデータのクリーニング
-```
+
+# snippy-clean_full_alnでアライメントデータのクリーニング
 snippy-clean_full_aln results/snippy-core/core.full.noref.aln > results/snippy-core/core.full.noref.clean.aln
-```
-#### run_gubbins.pyで組み換え領域を除外
-```
+
+# run_gubbins.pyで組み換え領域を除外
 run_gubbins.py --threads 16 --prefix results/snippy-core/gubbins/gubbins results/snippy-core/core.full.noref.clean.aln
-```
-#### snp-sitesでSNPサイトを検出
-```
+
+# snp-sitesでSNPサイトを検出
 snp-sites -c results/snippy-core/gubbins/gubbins.filtered_polymorphic_sites.fasta > results/snippy-core/core.full.noref.clean.final.aln
-```
-#### FastTreeで系統樹の作成
-```
+
+# FastTreeで系統樹の作成
 FastTree -gtr -nt results/snippy-core/core.full.noref.clean.final.aln  > results/snippy-core/core.full.noref.clean.final.newick
-```
-#### ヒートマップの作成
-```
+
+# ヒートマップの作成
 python heatmap.py
 ```
