@@ -1,5 +1,5 @@
 # ディレクトリの作成
-mdkir -p results/snippy-core
+mkdir -p results/snippy-core
 
 # snippy-coreでコアゲノムを検出
 snippy-core  --ref gbk/CP003166.gb --prefix results/snippy-core/core $(for i in $@; do echo "results/$i/$i " | tr -d '\n'; done)
