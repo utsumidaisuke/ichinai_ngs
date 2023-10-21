@@ -1,5 +1,5 @@
 # snippy-coreでコアゲノムを検出
-snippy-core  --ref gbk/CP003166.gb --prefix results/snippy-core/core $(for i in 1790 1791 1961 1964 2026 2066 2096; do echo results/CAM-$i/CAM-$i; done)
+snippy-core  --ref gbk/CP003166.gb --prefix results/snippy-core/core $(for i in $@; do echo "results/$i/$i " | tr -d '\n'; done)
 
 # seqkitでアライメントデータから参照配列を除外
 seqkit grep -i -v -p Reference results/snippy-core/core.full.aln > results/snippy-core/core.full.noref.aln
