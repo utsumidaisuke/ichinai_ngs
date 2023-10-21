@@ -71,7 +71,7 @@ bash prep_fastq.sh
 ```
 
 ## 解析の実行
-### 1st phase
+### 1st phaseの解析
 各サンプルのQC、トリミング、アライメント
 ```
 bash phase_1.sh CAM-1790
@@ -99,7 +99,7 @@ trim_galore --gzip --paired data/$1_1.fastq.gz data/$1_2.fastq.gz -o results/$1/
 snippy --cpus 10 --force --outdir results/$1/$1 --ref gbk/CP003166.gb --R1 results/$1/fastq/$1_1_val_1.fq.gz --R2 results/$1/fastq/$1_2_val_2.fq.gz
 ```
 
-### 2nd phase
+### 2nd phaseの解析
 各サンプルのアライメントデータを統合して解析
 ```
 bash phase_2.sh
