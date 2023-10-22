@@ -1,3 +1,4 @@
+# 解析に必要なライブラリをインストール
 mamba install -c bioconda entrez-direct -y
 mamba install -c bioconda parallel-fastq-dump -y
 mamba install -c bioconda fastqc -y

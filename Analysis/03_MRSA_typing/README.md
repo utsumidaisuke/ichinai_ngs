@@ -65,7 +65,7 @@ mamba install -c anaconda seaborn -y
 mamba install -c anaconda numpy -y
 ```
 ## リファレンスファイルの準備
-#### efetch-entrezでで参照配列を取得
+#### efetchで参照配列を取得
 ```
 bash prep/prep_ref.sh
 ```
