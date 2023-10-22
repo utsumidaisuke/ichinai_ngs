@@ -1,5 +1,6 @@
 # MRSA_typingの内容
-各MRSAサンプルののショートリードをsnippyを使い参照配列にマッピングを行い、各サンプルの配列のアライメントを行いコアゲノムを抽出する<br>
+各MRSAサンプルののショートリードをsnippyを使い参照配列にマッピングを行う<br>
+各サンプルの配列のアライメントを行いコアゲノムを抽出する<br>
 gubbinsで組み換え領域を除外した後に、snp情報から系統樹を作成<br>
 
 ## 参考文献
@@ -12,7 +13,7 @@ gubbinsで組み換え領域を除外した後に、snp情報から系統樹を�
 [Whole Genome Sequencing Analysis of Porcine Faecal Commensal Escherichia coli Carrying Class 1 Integrons from Sows and Their Offspring](https://www.mdpi.com/2076-2607/8/6/843)<br>
 [GitHubサイト](https://github.com/CJREID/snplord)
 
-## データのリポジトリ
+## fastqデータのリポジトリ
 [PRJDB11170](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP008386&o=acc_s%3Aa)
 
 ## 参照ゲノム(data/fastaに保存)
@@ -21,30 +22,11 @@ CC22: [NZ_CP007659](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP007659)<br>
 CC30: [NZ_CP009361](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP009361)<br>
 CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 
-## 解析のフロー
-解析のフェーズは２つに分かれる<br>
-**1st phase**: 各サンプルの前処理と参照配列(P003166.gb)へのアライメント<br>
-**2nd phase**: コアゲノム抽出および組み換え領域の除外、系統樹作成<br>
-### 1st phase
-1. fastqcでfastqファイルのクオリティーチェック<br>
-2. trim-galoreでアダプタートリミング<br>
-3. snippyで参照配列にリードをアライメント<br>
-### 2nd phase
-4. snippy-coreでコアゲノムを検出<br>
-5. seqkitでアライメントデータから参照配列を除外<br>
-6. snippy-clean_full_alnでアライメントデータのクリーニング<br>
-7. run_gubbins.pyで組み換え領域を除外<br>
-8. snp-sitesでSNPサイトを検出<br>
-9. FastTreeで系統樹の作成<br>
-10. ヒートマップの作成<br>
-
-
 ## 各種ツールの準備
 #### 必要なライブラリのインストール
 ```
 sudo apt-get install libtabixpp-dev
 ```
-
 #### 仮想環境の構築
 ```
 mamba create -n mrsa python=3.9 -y
@@ -74,6 +56,23 @@ bash prep/prep_ref.sh
 ```
 bash prep/prep_fastq.sh
 ```
+
+## 解析のフロー
+解析のフェーズは２つに分かれる<br>
+**1st phase**: 各サンプルの前処理と参照配列(P003166.gb)へのアライメント<br>
+**2nd phase**: コアゲノム抽出および組み換え領域の除外、系統樹作成<br>
+### 1st phase
+1. fastqcでfastqファイルのクオリティーチェック<br>
+2. trim-galoreでアダプタートリミング<br>
+3. snippyで参照配列にリードをアライメント<br>
+### 2nd phase
+4. snippy-coreでコアゲノムを検出<br>
+5. seqkitでアライメントデータから参照配列を除外<br>
+6. snippy-clean_full_alnでアライメントデータのクリーニング<br>
+7. run_gubbins.pyで組み換え領域を除外<br>
+8. snp-sitesでSNPサイトを検出<br>
+9. FastTreeで系統樹の作成<br>
+10. ヒートマップの作成<br>
 
 ## 解析の実行
 ### 1st phaseの解析
