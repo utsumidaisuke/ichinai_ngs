@@ -5,14 +5,14 @@ gubbinsで組み換え領域を除外した後に、snp情報から系統樹を�
 ## 参考文献
 下記の論文の解析結果の再現を試みる<br>
 組み換え配列の除外にClonalFrameMLを使っているが、本解析では代替としてgubbinsを使用<br>
-今回は本論文のCC59のMRSAのデータを使って説明<br>
+今回は本論文の**CC59**のMRSAのデータを使って説明<br>
 [Changes in the Genotypic Characteristics of Community-Acquired Methicillin-Resistant Staphylococcus aureus Collected in 244 Medical Facilities in Japan between 2010 and 2018: a Nationwide Surveillance](https://journals.asm.org/doi/epub/10.1128/spectrum.02272-21)
 
 実際の解析フローは下記の論文に添付されているsnakemakeのフローに準じる<br>
 [Whole Genome Sequencing Analysis of Porcine Faecal Commensal Escherichia coli Carrying Class 1 Integrons from Sows and Their Offspring](https://www.mdpi.com/2076-2607/8/6/843)<br>
 [GitHubサイト](https://github.com/CJREID/snplord)
 
-## ダウンロードデータ
+## データのリポジトリ
 [PRJDB11170](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP008386&o=acc_s%3Aa)
 
 ## 参照ゲノム(data/fastaに保存)
@@ -24,7 +24,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 ## 解析のフロー
 解析のフェーズは２つに分かれる<br>
 **1st phase**: 各サンプルの前処理と参照配列へのアライメント<br>
-**2nd phase**: 各サンプルのアライメント情報を統合し処理<br>
+**2nd phase**: コアゲノム抽出および組み換え領域の除外、系統樹作成<br>
 ### 1st phase
 1. fastqcでfastqファイルのクオリティーチェック<br>
 2. trim-galoreでアダプタートリミング<br>
