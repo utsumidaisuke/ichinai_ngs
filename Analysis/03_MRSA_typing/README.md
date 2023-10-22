@@ -1,13 +1,11 @@
 # MRSA_typingの内容
-MRSAのショートリードを参照配列にマッピング<br>
-snippyで複数サンプルのアライメント<br>
-gubbinsで組み換え配列の削除<br>
-snp情報から系統樹を作成<br>
-
+各MRSAサンプルののショートリードをsnippyを使い参照配列にマッピングを行い、各サンプルの配列のアライメントを行いコアゲノムを抽出する<br>
+gubbinsで組み換え領域を除外した後に、snp情報から系統樹を作成<br>
 
 ## 参考文献
 下記の論文の解析結果の再現を試みる<br>
 組み換え配列の除外にClonalFrameMLを使っているが、本解析では代替としてgubbinsを使用<br>
+今回は本論文のCC59のMRSAのデータを使って説明<br>
 [Changes in the Genotypic Characteristics of Community-Acquired Methicillin-Resistant Staphylococcus aureus Collected in 244 Medical Facilities in Japan between 2010 and 2018: a Nationwide Surveillance](https://journals.asm.org/doi/epub/10.1128/spectrum.02272-21)
 
 実際の解析フローは下記の論文に添付されているsnakemakeのフローに準じる<br>
