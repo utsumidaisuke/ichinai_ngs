@@ -64,10 +64,16 @@ mamba install -c anaconda pandas -y
 mamba install -c anaconda seaborn -y
 mamba install -c anaconda numpy -y
 ```
+## リファレンスファイルの準備
+#### efetch-entrezでで参照配列を取得
+```
+bash prep/prep_ref.sh
+```
+
 ## サンプルデータの準備
 #### parallel-fastq-dumpでfastqファイルをダウンロード
 ```
-bash prep_fastq.sh
+bash prep/prep_fastq.sh
 ```
 
 ## 解析の実行
@@ -95,7 +101,7 @@ fastqc data/$1_1.fastq.gz data/$1_2.fastq.gz -o results/$1/qc
 # trim-galoreでアダプタートリミング
 trim_galore --gzip --paired data/$1_1.fastq.gz data/$1_2.fastq.gz -o results/$1/fastq
 
-# snippyで参照配列にリードをアライメント
+# snippyで参照配列(CP003166.gb)にリードをアライメント
 snippy --cpus 10 --force --outdir results/$1/$1 --ref gbk/CP003166.gb --R1 results/$1/fastq/$1_1_val_1.fq.gz --R2 results/$1/fastq/$1_2_val_2.fq.gz
 ```
 

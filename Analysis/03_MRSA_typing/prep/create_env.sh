@@ -1,3 +1,4 @@
+mamba install -c bioconda entrez-direct -y
 mamba install -c bioconda parallel-fastq-dump -y
 mamba install -c bioconda fastqc -y
 mamba install -c bioconda trim-galore -y
