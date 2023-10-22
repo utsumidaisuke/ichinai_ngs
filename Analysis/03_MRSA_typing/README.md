@@ -108,7 +108,7 @@ snippy --cpus 10 --force --outdir results/$1/$1 --ref gbk/CP003166.gb --R1 resul
 ### 2nd phaseの解析
 各サンプルのアライメントデータを統合して解析
 ```
-bash phase_2.sh
+bash phase_2.sh CAM-1790 CAM-1791 CAM-1961 CAM-1964 CAM-2026 CAM-2066 CAM-2096
 ```
 #### phase_2.shの内容
 ```
