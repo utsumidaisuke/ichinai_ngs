@@ -23,7 +23,7 @@ CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
 
 ## 解析のフロー
 解析のフェーズは２つに分かれる<br>
-**1st phase**: 各サンプルの前処理と参照配列へのアライメント<br>
+**1st phase**: 各サンプルの前処理と参照配列(P003166.gb)へのアライメント<br>
 **2nd phase**: コアゲノム抽出および組み換え領域の除外、系統樹作成<br>
 ### 1st phase
 1. fastqcでfastqファイルのクオリティーチェック<br>
@@ -52,6 +52,7 @@ mamba activate mrsa
 ```
 #### 必要なライブラリのインストール
 ```
+mamba install -c bioconda entrez-direct -y
 mamba install -c bioconda parallel-fastq-dump -y
 mamba install -c bioconda fastqc -y
 mamba install -c bioconda trim-galore -y
