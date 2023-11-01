@@ -13,27 +13,6 @@ gubbinsで組み換え領域を除外した後に、snp情報から系統樹を�
 [Whole Genome Sequencing Analysis of Porcine Faecal Commensal Escherichia coli Carrying Class 1 Integrons from Sows and Their Offspring](https://www.mdpi.com/2076-2607/8/6/843)<br>
 [GitHubサイト](https://github.com/CJREID/snplord)
 
-## fastqデータのリポジトリ
-[PRJDB11170](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP008386&o=acc_s%3Aa)
-
-## サンプルデータの準備
-#### parallel-fastq-dumpでfastqファイルをダウンロード(data/に保存)
-```
-bash prep/prep_fastq.sh
-```
-
-## 参照ゲノム
-CC8: [NC_007793](https://www.ncbi.nlm.nih.gov/nuccore/NC_007793)<br>
-CC22: [NZ_CP007659](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP007659)<br>
-CC30: [NZ_CP009361](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP009361)<br>
-CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
-
-## リファレンスファイルの準備
-#### efetchで参照配列を取得(gbk/に保存)
-```
-bash prep/prep_ref.sh
-```
-
 ## 各種ツールの準備
 #### 必要なライブラリのインストール
 ```
@@ -56,6 +35,27 @@ mamba install -c bioconda seqkit -y
 mamba install -c anaconda pandas -y
 mamba install -c anaconda seaborn -y
 mamba install -c anaconda numpy -y
+```
+
+## サンプルデータの準備
+#### fastqデータのリポジトリ
+[PRJDB11170](https://www.ncbi.nlm.nih.gov/Traces/study/?acc=DRP008386&o=acc_s%3Aa)
+
+#### parallel-fastq-dumpでfastqファイルをダウンロード(data/に保存)
+```
+bash prep/prep_fastq.sh
+```
+
+## 参照ゲノム
+CC8: [NC_007793](https://www.ncbi.nlm.nih.gov/nuccore/NC_007793)<br>
+CC22: [NZ_CP007659](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP007659)<br>
+CC30: [NZ_CP009361](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP009361)<br>
+CC59: [CP003166](https://www.ncbi.nlm.nih.gov/nuccore/CP003166)
+
+## リファレンスファイルの準備
+#### efetchで参照配列を取得(gbk/に保存)
+```
+bash prep/prep_ref.sh
 ```
 
 ## 解析のフロー
