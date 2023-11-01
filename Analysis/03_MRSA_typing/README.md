@@ -115,6 +115,8 @@ snippy --cpus 10 --force --outdir results/$1/$1 --ref gbk/CP003166.gb --R1 resul
 bash phase_2.sh CAM-1790 CAM-1791 CAM-1961 CAM-1964 CAM-2026 CAM-2066 CAM-2096
 ```
 #### phase_2.shの内容
+heatmap画像が出力されるが、サンプルの順番を並べ替える必要あり<br>
+その際には、heatmap_df.csvを利用する<br>
 ```
 # snippy-coreでコアゲノムを検出
 snippy-core  --ref gbk/CP003166.gb --prefix results/snippy-core/core $(for i in 1790 1791 1961 1964 2026 2066 2096; do echo results/CAM-$i/CAM-$i; done)
