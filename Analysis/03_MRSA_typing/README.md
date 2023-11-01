@@ -13,7 +13,7 @@ gubbinsで組み換え領域を除外した後に、snp情報から系統樹を�
 [Whole Genome Sequencing Analysis of Porcine Faecal Commensal Escherichia coli Carrying Class 1 Integrons from Sows and Their Offspring](https://www.mdpi.com/2076-2607/8/6/843)<br>
 [GitHubサイト](https://github.com/CJREID/snplord)
 
-## 各種ツールの準備
+## 必要なツールの準備
 #### 必要なライブラリのインストール
 ```
 sudo apt-get install libtabixpp-dev
@@ -35,6 +35,10 @@ mamba install -c bioconda seqkit -y
 mamba install -c anaconda pandas -y
 mamba install -c anaconda seaborn -y
 mamba install -c anaconda numpy -y
+```
+## リポジトリのクローン
+```
+git clone https://github.com/utsumidaisuke/ichinai_ngs.git
 ```
 
 ## サンプルデータの準備
