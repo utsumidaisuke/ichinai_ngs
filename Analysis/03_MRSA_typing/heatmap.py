@@ -48,3 +48,4 @@ df = df.loc[samples,samples]
 sns.set()
 sns.heatmap(df, annot=True, fmt='.0f', cmap='RdYlGn_r')
 plt.savefig('results/snippy-core/heatmap.png')       
+df.to_csv('results/snippy-core/heatmap_df.csv')
