@@ -34,7 +34,7 @@ mamba install -c bioconda gubbins -y
 mamba install -c bioconda seqkit -y
 mamba install -c anaconda pandas -y
 mamba install -c anaconda numpy -y
-mamba install -c anaconda seaborn -y
+mamba install -c anaconda seaborn=0.13.0 -y
 ```
 ## リポジトリのクローン
 ```
