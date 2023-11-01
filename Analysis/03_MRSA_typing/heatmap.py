@@ -46,6 +46,6 @@ df.columns = list(dic.keys())
 df.index = list(dic.keys())
 df = df.loc[samples,samples]
 sns.set()
-sns.heatmap(df, annot=True, cmap='RdYlGn_r')
+sns.heatmap(df, annot=True, cmap='RdYlGn_r', fmt='.0f')
 plt.savefig('results/snippy-core/heatmap.png')       
 df.to_csv('results/snippy-core/heatmap_df.csv')
