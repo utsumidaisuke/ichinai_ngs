@@ -39,6 +39,7 @@ mamba install -c anaconda numpy -y
 ## リポジトリのクローン
 ```
 git clone https://github.com/utsumidaisuke/ichinai_ngs.git
+cd ichinai_ngs/Analysis/03_MRSA_typing/
 ```
 
 ## サンプルデータの準備
