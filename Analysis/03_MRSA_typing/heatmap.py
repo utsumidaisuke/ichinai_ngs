@@ -42,8 +42,10 @@ for i in range(n):
         df.iloc[i,j] = comp(ls[i], ls[j])
 
 # インデックスとカラム名の変更および並び替え
-df.columns = list(dic.keys())
-df.index = list(dic.keys())
+# df.columns = list(dic.keys())
+df = ['CAM-1961', 'CAM-2026', 'CAM-2096', 'CAM-2066', 'CAM-1791', 'CAM-1790', 'CAM-1964']
+# df.index = list(dic.keys())
+df.index = ['CAM-1961', 'CAM-2026', 'CAM-2096', 'CAM-2066', 'CAM-1791', 'CAM-1790', 'CAM-1964']
 df = df.loc[samples,samples]
 sns.set()
 sns.heatmap(df, annot=True, cmap='RdYlGn_r', fmt='.0f')
